@@ -1,0 +1,394 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static './assests/style/style.css'%}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="logo">
+        
+        <a href="index"><img src="{%static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
+    
+        <div class="burgerMenu" onclick="openMenu()">
+            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+        </div>
+    </div> 
+    <header class="homeHeader">
+        <nav>
+            <div class="menu">
+                <a href="index">Home</a>
+                <div class="dropdown">
+                    <a href="category">Category</a>
+                    <div class="dropdown-container-row">
+                        {% for categories in categories %}
+                        <div class="row">
+                            <a href="{% url 'categorydetails' categories.slug %}">{{categories.category_name}}</a>  
+                            <!-- <a href="\">Fashion</a>  
+                            <a href="\">Education</a>  
+                            <a href="\">Food</a>   -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="store">Store</a>
+                    <div class="dropdown-container">
+                        {% for stores in stores%}
+                        <div class="column">
+                            <a href="{% url 'storedetails' stores.slug %}"><img src="/media/{{stores.logo}}" alt=""> {{stores.Store_name}}</a>
+                        </div>
+                        {%endfor %}
+                        <!-- <div class="column">
+                            <a href="\"><img src="./assests/image/logo/Acerlogo.png" alt=""> Acer</a>
+                            <a href="\"><img src="./assests/image/logo/adidas.png" alt="">Addidas</a>
+                            <a href="\"><img src="./assests/image/logo/Ajio.png" alt="">Ajio</a>
+                        </div> -->
+                    </div>
+                </div>
+                <a href="contact">Contact</a>
+            </div>
+            <div class="mobileMenu">
+                <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
+                <a href="index">Home</a>
+                <a href="Category">Category</a>
+                <a href="store">Stores</a>
+                <a href="contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section class="features">
+        <div class="best-deal-text">Find the best deals in India</div>
+        <div class="search-bar">
+            <input type="search" name="search" id="searchBar" placeholder="Search for coupons, deals, stores etc.">
+            <button type="button">Search</button>
+        </div>
+        <div class="featured-stores">
+            <div class="feature-menu">
+                <div class="feature-text">feature Menu</div>
+                <div class="view-all"><a href="store">View All</a></div>
+            </div>
+            <div class="featured-wrapper" data-slider>
+                <button class="left" data-slider-prev disabled>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="featured-carousel" data-slider-track>
+                    {% for stores in stores%}
+                    <div class="store-slider-card">
+                        <a href="{% url 'storedetails' stores.slug %}">
+                            <img src="/media/{{stores.logo}}" alt="">
+                            <div class="coupon-count">{{stores.total_offers}} Coupons</div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                 
+                </div>
+        
+                    <button class="right" data-slider-next>
+                        <i class="fa-solid fa-chevron-right" ></i>
+                    </button>
+            </div>
+        
+
+        </div>
+    </section>
+    <section class="featured-offers">
+        <div class="featured-filter-bar">
+            <a href="\">Featured Offers</a>
+            <a href="\">Travel</a>
+            <a href="\">Fashion</a>
+            <a href="\">Technology</a>
+            <a href="\">View All</a>
+        </div>
+        <div class="coupon-wrapper">
+            <div class="coupon-container">
+                <div class="coupon">
+                    <div class="coupon-logo">
+                        <a href=""><img src="./assests/image/logo/adidas.png" alt=""></a>
+                    </div>
+                    <div class="couponp-description">
+                        <h1>Upto 30% Off</h1>
+                        <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Voluptatem, alias.</span>
+                    </div>
+                    <div class="show-code" >
+                        <a href="https://www.facebook.com/" class="delayLink" ><button type="button" class="modal-button" data-modal="modal-1" id="openCoupon">Show Code</button></a>
+                    </div>
+                </div>
+                <div class="coupon-modal-container" id="modal-1">
+                    <div class="coupon-modal">
+                        <span class="close" data-modal="modal-1" id="close" >&times;</span>
+                        <img src="./assests/image/logo/adidas.png" alt="">
+                        <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Voluptatem, alias.</span>
+                        <div class="code">
+                            <span id="couponCode1">CouponBaar</span>
+                        </div>
+                        <div class="btn">
+                            <button type="button" id="copy" data-clipboard-target="#couponCode1">Copy Code</button>
+                            <a href="https://www.facebook.com/" target="_blank"><button type="button" id=shopNow>Shop Now</button></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-container">
+                <div class="coupon">
+                    <div class="coupon-logo">
+                        <a href=""><img src="./assests/image/logo/beardo.png" alt=""></a>
+                    </div>
+                    <div class="couponp-description">
+                        <h1>Upto 30% Off</h1>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat laborum totam voluptatibus!
+                            Voluptatem, alias.</span>
+                    </div>
+                    <div class="show-code" >
+                        <a href="https://www.instagram.com/" class="delayLink" ><button class="modal-button" type="button" data-modal="modal-2" id="openCoupon" >Show Code</button></a>
+                    </div>
+                </div>
+                <div class="coupon-modal-container" id="modal-2">
+                    <div class="coupon-modal">
+                        <span class="close" data-modal="modal-2" id="close" >&times;</span>
+                        <img src="./assests/image/logo/beardo.png" alt="">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque nihil consequatur provident.
+                            Voluptatem, alias.</span>
+                        <div class="code">
+                            <span id="couponCode2">CouponBeardo</span>
+                        </div>
+                        <div class="btn">
+                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
+                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop Now</button></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="coupon-container">
+                <div class="coupon">
+                    <div class="coupon-logo">
+                        <a href=""><img src="./assests/image/logo/boat.png" alt=""></a>
+                    </div>
+                    <div class="couponp-description">
+                        <h1>Upto 30% Off</h1>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat laborum totam voluptatibus!
+                            Voluptatem, alias.</span>
+                    </div>
+                    <div class="show-code" >
+                        <a href="https://www.google.com/" class="delayLink" ><button class="modal-button" type="button" data-modal="modal-3" id="openCoupon" >Show Code</button></a>
+                    </div>
+                </div>
+                <div class="coupon-modal-container" id="modal-3">
+                    <div class="coupon-modal">
+                        <span class="close" data-modal="modal-3" id="close" >&times;</span>
+                        <img src="./assests/image/logo/boat.png" alt="">
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque nihil consequatur provident.
+                            Voluptatem, alias.</span>
+                        <div class="code">
+                            <span id="couponCode3">CouponBoat</span>
+                        </div>
+                        <div class="btn">
+                            <button type="button" id="copy" data-clipboard-target="#couponCode3">Copy Code</button>
+                            <a href="https://www.google.com/" target="_blank"><button type="button" id=shopNow>Shop Now</button></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-wrapper">
+        <div class="category-main">
+            <div class="category-heading">
+                <h1>Featured Category</h1>
+                <a href="category">
+                    <span class="view-all-link">View All</span>
+                </a>
+            </div>
+            <div class="category-container">
+                {% for categories in categories%}
+                <a href="{% url 'categorydetails' categories.slug %}">
+                <div class="category">
+                    <div class="category-logo">
+                        <img src="/media/{{categories.category_image}}" alt="">
+                        <div class="offer-count">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="category-name">
+                        <h2>{{categories.category_name}}</h2>
+                    </div>
+                </div></a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-container">
+
+            <div class="footer-container-item ">
+                <div class="item-footer reveal">
+                    <h3>Welcome</h3>
+                    <p>
+                        Thank you for choosing CouponBaar We're thrilled to have you here, and we hope you
+                        find amazing deals and savings on our platform. Our dedicated team works tirelessly to bring you
+                        the latest and most valuable coupons, discounts, and promotions from your favorite stores.
+                        <br><br>
+                        Happy shopping,<br>
+                        The CouponBaar Team.
+                    </p>
+                </div>
+                <div class="item-footer reveal">
+                    <h3>Important Link</h3>
+
+                    <div class="footer-nav">
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i>
+                            <a href="index.html">Home</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="store.html">Stores</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="Category.html">Category</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer reveal">
+                    <h3>Category</h3>
+
+                    <div class="footer-nav">
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i>
+                            <a href="\">Fashion</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="\">Technology</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="\">Food</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="\">Healthcare</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="\">Home Care</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="\">Education</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-footer reveal">
+                    <h3>Top Stores</h3>
+                    <div class="footer-nav">
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i>
+                            <a href="fc-moto.html">FC Moto</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="cottonOn.html">Cotton ON</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="Eddie_Bauer_US.html">Eddie Bauer</a>
+                        </div>
+                        <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="kohls_us.html">Kohl's</a>
+                        </div>
+                        <div class="link">
+                            <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
+                                href="store.html">More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-container-social">
+                <h3>Social Media</h3>
+                <div class="social-link">
+                    <a href="#"><i class="fa-brands fa-facebook  fa-bounce fa-2xl"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-bounce fa-2xl "></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-bounce fa-2xl "></i></a>
+                </div>
+                <div class="subscribe">
+                    <input type="email" name="" id="" placeholder="Subscribe Now">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-container-credentials">
+                <div class="left-credit">
+                    <a href="licence">License</a>
+                    <a href="privacyandpolicy">Privacy and Policy</a>
+                    <a href="termsofservice">Term of Services</a>
+
+                </div>
+                <div class="right-credit">
+                    <p>© 2023 - Designed & Developed by CouponBaar. <br> All rights reserved</p>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <div class="logo"><a href="index"><img src="{% static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="{% static './assests/script/app.js' %}"></script>
+    <script>
+        const slider = document.querySelector("[data-slider]");
+
+        const track = slider.querySelector("[data-slider-track]");
+        const prev = slider.querySelector("[data-slider-prev]");
+        const next = slider.querySelector("[data-slider-next]");
+
+        if (track) {
+            prev.addEventListener("click", () => {
+                next.removeAttribute("disabled");
+
+                track.scrollTo({
+                    left: track.scrollLeft - track.firstElementChild.offsetWidth- 100,
+                    behavior: "smooth"
+                });
+            });
+
+            next.addEventListener("click", () => {
+                prev.removeAttribute("disabled");
+
+                track.scrollTo({
+                    left: track.scrollLeft +track.firstElementChild.offsetWidth + 100 ,
+                    behavior: "smooth"
+                });
+            });
+
+            track.addEventListener("scroll", () => {
+                const trackScrollWidth = track.scrollWidth;
+                const trackOuterWidth = track.clientWidth;
+
+                prev.removeAttribute("disabled");
+                next.removeAttribute("disabled");
+
+                if (track.scrollLeft <= 0) {
+                    prev.setAttribute("disabled", "");
+                }
+
+                if (track.scrollLeft === trackScrollWidth - trackOuterWidth) {
+                    next.setAttribute("disabled", "");
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

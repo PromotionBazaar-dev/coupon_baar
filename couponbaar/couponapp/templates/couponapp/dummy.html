@@ -1,0 +1,67 @@
+<section class="coupon-sec">
+    <div class="coupons-wrapper">
+        {% for coupons in coupons %}
+        <div class="coupons-container" data-item="myntra">
+            <div class="coupons">
+                <div class="coupons-logo">
+                    <a href=""><img src="./assests/image/logo/myntra.png" alt=""></a>
+                </div>
+                <div class="coupon-description">
+                    <h1>{{coupons.discount}}</h1>
+                    <span>{{coupons.coupon_description}}</span>
+                </div>
+                <div class="show-code">
+                    <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
+                            type="button" data-modal="modal-1" id="openCoupon">Show Code</button></a>
+                </div>
+            </div>
+            <div class="coupon-modal-container" id="modal-1">
+                <div class="coupon-modal">
+                    <span class="close" data-modal="modal-1" id="close">&times;</span>
+                    {% for stores in stores %}
+                    <img src="/media/{{stores.logo}}" alt="">
+                    <span>{{stores.store_description}}</span>
+                    {% endfor %}
+                    <div class="code">
+                        <span id="couponCode2">Coupon Code</span>
+                    </div>
+                    <div class="btn">
+                        <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
+                        <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
+                                Now</button></a>
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+</section>
+
+<section class="coupons">
+    <div class="coupon-wrapper">
+        {% for coupons in coupons %}
+        <div class="coupon-container">
+            <div class="coupon">
+                {% for stores in stores%}
+                <div class="coupon-logo">
+                    <a href=""><img src="/media/{{stores.logo}}" alt=""></a>
+                </div>
+                {% endfor %}
+                <div class="couponp-description">
+                    <h1>{{coupons.discount}}</h1>
+                    <span>{{coupons.coupon_description}}</span>
+                </div>
+                <div class="show-code" >
+                    <a href="{{coupons.tracking_urls}}" class="delayLink" ><button type="button" class="modal-button" data-modal="modal-1" id="openCoupon">Show Code</button></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    
+</section>

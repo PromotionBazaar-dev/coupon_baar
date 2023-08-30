@@ -1,0 +1,43 @@
+<header class="homeHeader">
+    <nav>
+        <div class="menu">
+            <a href="index">Home</a>
+            <div class="dropdown">
+                <a href="category">Category</a>
+                <div class="dropdown-container-row">
+                    {% for categories in categories %}
+                    <div class="row">
+                        <a href="{% url 'categorydetails' categories.slug %}">{{categories.category_name}}</a>  
+                        <!-- <a href="\">Fashion</a>  
+                        <a href="\">Education</a>  
+                        <a href="\">Food</a>   -->
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="store">Store</a>
+                <div class="dropdown-container">
+                    {% for stores in stores%}
+                    <div class="column">
+                        <a href="{% url 'storedetails' stores.slug %}"><img src="/media/{{stores.logo}}" alt=""> {{stores.Store_name}}</a>
+                    </div>
+                    {%endfor %}
+                    <!-- <div class="column">
+                        <a href="\"><img src="./assests/image/logo/Acerlogo.png" alt=""> Acer</a>
+                        <a href="\"><img src="./assests/image/logo/adidas.png" alt="">Addidas</a>
+                        <a href="\"><img src="./assests/image/logo/Ajio.png" alt="">Ajio</a>
+                    </div> -->
+                </div>
+            </div>
+            <a href="contact">Contact</a>
+        </div>
+        <div class="mobileMenu">
+            <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
+            <a href="index">Home</a>
+            <a href="Category">Category</a>
+            <a href="store">Stores</a>
+            <a href="contact">Contact</a>
+        </div>
+    </nav>
+</header>
