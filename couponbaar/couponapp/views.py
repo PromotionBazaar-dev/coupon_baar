@@ -41,7 +41,6 @@ def categorydetailsview(request, slug):
         return render('category')
 
 
-
 def storedetailsview(request, slug):
     stores = Store.objects.filter(slug=slug)
     if stores:
