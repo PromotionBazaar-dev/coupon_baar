@@ -232,7 +232,7 @@ body,html{
 }
 
 .dropdown .dropdown-container .column a{
-    width: 150px;
+    width: 180px;
     height: 100px;
     text-align: center;
     color: #000;
@@ -577,7 +577,6 @@ body,html{
     scroll-behavior: smooth;
     position: relative;
     padding: 12px;
-    /* / background-color: #7063d9; / */
     
 }
 .filter-wrapper::-webkit-scrollbar{
@@ -712,8 +711,8 @@ background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
     justify-content: center;
 }
 .coupons .coupons-logo {
-    width: 150px;
-    height: 100px;
+    width: 90px;
+    aspect-ratio: 3/2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -994,7 +993,6 @@ background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
     align-items:center ;
 }
 .category-item{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1010,22 +1008,27 @@ background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
     color: #fff;
     text-decoration: none;
 }
-.category-icon:hover{
-    transform: translateY(-5px);
+.category-icon:hover img{
+    transform: scale(1.12);
+    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.7);
 }
-.category-item .category-icon{
+
+.category-item a{
+    width: 130px;
+    height: auto;
+    overflow: hidden;
+}
+.category-item .category-icon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    
-}
-.category-item .category-icon {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 8px ;
+    overflow: hidden;
 }
 .category-item .category-icon  img{
     max-width: 100%;
@@ -1033,6 +1036,7 @@ background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
 .category-item .category-icon .offers:hover{
     opacity: 1;
 }
+
 .category-item .category-icon .offers {
     position: absolute;
     top: 0;
@@ -1047,18 +1051,27 @@ background-image: linear-gradient(315deg, #fdf86d 0%, #bddcf1 74%);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.category-item .category-icon .offers {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
 }
 .category-item .featured-category-name{
+    width: 110px;
+    /* display: flex; */
+    text-overflow: ellipsis;
+    overflow: auto;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     padding: 8px 16px;
     color: #000;
     /* border-top: 1px dashed #777; */
+}
+.category-item .featured-category-name::-webkit-scrollbar{
+    display: none;
+}
+.category-item .featured-category-name h1{
+    text-align:center ;
+
 }
 .category-item .featured-store-name{
     text-align: center;
@@ -1945,6 +1958,7 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     .coupons-container .coupons{
         width: auto;
     }
+
     /* .coupon .show-code button ,.coupons .show-code button{
         margin: 0;
     } */
@@ -1964,9 +1978,12 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     }
     .category-item{
         flex-direction: row;
-        width: auto;
+        
         background-color: #fff;
 
+    }
+    .filter-wrapper{
+        display:none;
     }
     .category-item .category-icon {
         width: 150px;
@@ -1993,7 +2010,9 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     .category-item .featured-store-name{
         padding: 0 12px;
     }
-    
+    .category-item a{
+        width: fit-content;
+    }
     .store-head{
         width: 95%;
     }
@@ -2006,7 +2025,6 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
         /* text-align: center; */
         text-overflow: ellipsis;
         white-space: nowrap;
-        
     }
 
 .best-deal .deal-head-container{
