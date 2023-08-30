@@ -4,6 +4,8 @@ from couponapp.models import *
 from math import ceil
 from django.db import models
 
+
+
 # Create your views here.
 def Index(request):
     stores = Store.objects.all()
@@ -26,10 +28,9 @@ def store(request):
     return render(request, 'couponapp/store.html', context)
 
 def categorydetailsview(request, slug):
-    if(Category.objects.filter(slug=slug)):
+    category_name = Category.objects.filter(slug=slug)
+    if category_name:
         stores = Store.objects.filter(category__slug=slug)
-        category_name = Category.objects.filter(slug=slug)
-        coupons = Coupon.objects.all()
         context = {'stores': stores, 'category_name': category_name}
         return render(request, 'couponapp/categorydetails.html', context)
     else:
@@ -42,10 +43,10 @@ def categorydetailsview(request, slug):
 
 
 def storedetailsview(request, slug):
-    if(Store.objects.filter(slug=slug)):
-        stores = Store.objects.filter(slug=slug)
+    stores = Store.objects.filter(slug=slug)
+    if stores:
         category_name = Category.objects.filter(slug=slug)
-        coupons = Coupon.objects.all()
+        coupons = Coupon.objects.filter(Store_name=slug)
         context = {'stores': stores, 'coupons': coupons, 'category_name': category_name}
         return render(request, 'couponapp/storedetails.html', context)
     else:
