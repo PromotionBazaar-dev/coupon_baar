@@ -137,6 +137,4 @@ logs/*
 !logs/.gitkeep
 .DS_Store
 .uwsgi.ini
-static/
-media/
 celerybeat-schedule
