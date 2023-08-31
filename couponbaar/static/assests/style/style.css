@@ -754,7 +754,7 @@ body,html{
 .delayLink{
     padding: 0%;
 }
-.coupon .show-code button ,.coupons .show-code{
+.coupons .show-code button ,.coupons .show-code{
     position: absolute;
     right: 0%;
 }
