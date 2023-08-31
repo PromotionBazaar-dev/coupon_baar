@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +15,10 @@
         integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="logo">
-        
+
         <a href="index"><img src="{% static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
         <div class="menu-search-bar">
             <input type="search" name="search" id="searchBar" placeholder="Search for coupons, deals, stores etc.">
@@ -25,7 +27,7 @@
         <div class="burgerMenu" onclick="openMenu()">
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
         </div>
-    </div> 
+    </div>
     <header class="header">
         <nav>
             <div class="menu-contact">
@@ -34,10 +36,11 @@
                     <a href="category" class="nav-item">Category</a>
                     <div class="dropdown-container">
                         <div class="column">
-                            {% for categories in categories|slice:":12"  %}
-                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="">
+                            {% for categories in categories|slice:":12" %}
+                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img
+                                    src="/media/{{categories.category_image}}" alt="">
                                 <span>{{categories.category_name}}</span></a>
-                                {% endfor %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -46,9 +49,10 @@
                     <div class="dropdown-container">
                         <div class="column">
                             {% for stores in stores|slice:":12" %}
-                            <a href="{% url 'storedetails' stores.slug %}" class="dd-link"><img src="/media/{{stores.logo}}" alt="">
+                            <a href="{% url 'storedetails' stores.slug %}" class="dd-link"><img
+                                    src="/media/{{stores.logo}}" alt="">
                                 <span>{{stores.Store_name}}</span></a>
-                                {% endfor %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -72,18 +76,20 @@
             <div class="featured-category-container">
                 {% for stores in stores|slice:":12" %}
                 <div class="category-item">
-                    <div class="category-icon">
-                        <a href="{% url 'storedetails' stores.slug %}"><img src="/media/{{stores.logo}}" alt=""></a>
-                        <div class="offers">
-                            <a href="{% url 'storedetails' stores.slug %}"> <span>{{stores.total_offers}} Coupons</span></a>
+                    <a href="{% url 'storedetails' stores.slug %}">
+                        <div class="category-icon">
+                            <img src="/media/{{stores.logo}}" alt="">
+                            <div class="offers">
+                                <span>{{stores.total_offers}} Coupons</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="featured-store-name">
-                        <h2>{{stores.Store_name}}</h2>
-                    </div>
+                        <div class="featured-store-name">
+                            <h2>{{stores.Store_name}}</h2>
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
-                
+
             </div>
         </div>
     </section>
@@ -97,17 +103,19 @@
         </div>
         <div class="all-category-container">
             {% for stores in stores %}
-            
+
             <div class="category-item">
-                <div class="category-icon">
-                    <a href="{% url 'storedetails' stores.slug %}"><img src="/media/{{stores.logo}}" alt=""></a>
-                    <div class="offers">
-                        <a href="{% url 'storedetails' stores.slug %}"> <span>{{stores.total_offers}} Coupons</span></a>
+                <a href="{% url 'storedetails' stores.slug %}">
+                    <div class="category-icon">
+                        <img src="/media/{{stores.logo}}" alt="">
+                        <div class="offers">
+                            <span>{{stores.total_offers}} Coupons</span>
+                        </div>
                     </div>
-                </div>
-                <div class="featured-store-name">
-                    <h2>{{stores.Store_name}}</h2>
-                </div>
+                    <div class="featured-store-name">
+                        <h2>{{stores.Store_name}}</h2>
+                    </div>
+                </a>
             </div>
             {% endfor %}
         </div>
@@ -223,4 +231,5 @@
     </section>
     <script src="./assests/script/app.js"></script>
 </body>
+
 </html>
