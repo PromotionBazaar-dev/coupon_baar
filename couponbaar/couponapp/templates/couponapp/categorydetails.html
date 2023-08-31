@@ -70,14 +70,15 @@
 
     <section class="main-store">
         <div class="store-head" id="categoryHeading">
+          {% for categories in categories %}
             <div class="store-logo" id="ctageoryImage">
-                <img src="./assests/image/category/fashion.png" alt="">
+                <img src="/media/{{categories.category_image}}" alt="">
             </div>
             <div class="border">
             </div>
             <div class="store-content">
                 <div class="store-description">
-                    Trending Fashion Stores in 2023
+                    Trending {{categories.category_name}} Stores in 2023
                 </div>
                 <div class="store-coupon-count">
                     7 Stores and 158 Coupons
@@ -86,6 +87,7 @@
                     <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </section>
     <div class="filter-head-container">
