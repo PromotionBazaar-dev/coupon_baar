@@ -754,7 +754,7 @@ body,html{
 .delayLink{
     padding: 0%;
 }
-.coupons .show-code button ,.coupons .show-code{
+.coupons .show-code{
     position: absolute;
     right: 0%;
 }
@@ -1970,7 +1970,7 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
         width: auto;
     }
 
-    .coupons .show-code button ,.coupons .show-code{
+    .coupons .show-code{
         position: relative;
     }
     /* .coupon .show-code button ,.coupons .show-code button{
