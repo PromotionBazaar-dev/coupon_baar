@@ -28,42 +28,42 @@
         </div>
     </div>
     <header class="header">
-        <nav>
-            <div class="menu-contact">
-                <a href="index" class="nav-item">Home</a>
-                <div class="dropdown">
-                    <a href="category" class="nav-item">Category</a>
-                    <div class="dropdown-container">
-                        <div class="column">
-                            {% for categories in categories|slice:":12"  %}
-                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="" />
-                              <span>{{categories.category_name}}</span></a>
-                              {% endfor %}
-                          </div>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="store" class="nav-item">Store</a>
-                    <div class="dropdown-container">
-                        <div class="column">
-                            {% for stores in stores|slice:":12" %}
-                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="">
-                                <span>{{stores.Store_name}}</span></a>
+      <nav>
+          <div class="menu-contact">
+              <a href="index" class="nav-item">Home</a>
+              <div class="dropdown">
+                  <a href="category" class="nav-item">Category</a>
+                  <div class="dropdown-container">
+                      <div class="column">
+                          {% for categories in categories|slice:":12"  %}
+                          <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="" />
+                            <span>{{categories.category_name}}</span></a>
                             {% endfor %}
                         </div>
-                    </div>
-                </div>
-                <a href="contact">Contact</a>
-            </div>
-            <div class="mobileMenu">
-                <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
-                <a href="index">Home</a>
-                <a href="Category">Category</a>
-                <a href="store">Stores</a>
-                <a href="contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <a href="store" class="nav-item">Store</a>
+                  <div class="dropdown-container">
+                      <div class="column">
+                          {% for stores in stores|slice:":12" %}
+                          <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="">
+                              <span>{{stores.Store_name}}</span></a>
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+              <a href="contact" class="nav-item">Contact</a>   
+          </div>
+          <div class="mobileMenu">
+              <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
+              <a href="index">Home</a>
+              <a href="Category">Category</a>
+              <a href="store">Stores</a>
+              <a href="contact">Contact</a>
+          </div>
+      </nav>
+  </header>
 
     <section class="featured-category">
         <div class="featured-category-heading">
@@ -117,7 +117,7 @@
     <section class="footer">
       <div class="footer-container">
         <div class="footer-container-item">
-          <div class="item-footer reveal">
+          <div class="item-footer ">
             <h3>Welcome</h3>
             <p>
               Thank you for choosing CouponBaar We're thrilled to have you here,
@@ -130,7 +130,7 @@
               The CouponBaar Team.
             </p>
           </div>
-          <div class="item-footer reveal">
+          <div class="item-footer ">
             <h3>Important Link</h3>
   
             <div class="footer-nav">
@@ -151,7 +151,7 @@
               </div>
             </div>
           </div>
-          <div class="item-footer reveal">
+          <div class="item-footer ">
             <h3>Category</h3>
   
             <div class="footer-nav">
@@ -177,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="item-footer reveal">
+          <div class="item-footer ">
             <h3>Top Stores</h3>
             <div class="footer-nav">
               <div class="link">
