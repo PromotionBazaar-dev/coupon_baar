@@ -34,11 +34,11 @@
                     <a href="category" class="nav-item">Category</a>
                     <div class="dropdown-container">
                         <div class="column">
-                            {% for categories in categories|slice:":12"  %}
-                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="" />
-                              <span>{{categories.category_name}}</span></a>
-                              {% endfor %}
-                          </div>
+                          {% for categories in categories|slice:":12"  %}
+                          <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="" />
+                            <span>{{categories.category_name}}</span></a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
                 <div class="dropdown">
