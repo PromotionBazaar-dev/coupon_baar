@@ -38,7 +38,7 @@ def categorydetailsview(request, slug):
         coupons = Coupon.objects.all()
         categories = Category.objects.all()
         context = {'stores': stores, 'coupons': coupons, 'categories': categories}
-    return render(request, 'couponapp/categorydetails.html')
+        return render(request, 'couponapp/categorydetails.html')
 
 
 def storedetailsview(request, slug):
