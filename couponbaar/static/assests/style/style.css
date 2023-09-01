@@ -1970,6 +1970,9 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
         width: auto;
     }
 
+    .coupons .show-code button ,.coupons .show-code{
+        position: relative;
+    }
     /* .coupon .show-code button ,.coupons .show-code button{
         margin: 0;
     } */
