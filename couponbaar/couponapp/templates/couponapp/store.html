@@ -47,9 +47,9 @@
                     <a href="store" class="nav-item">Store</a>
                     <div class="dropdown-container">
                         <div class="column">
-                            {% for stores in stores|slice:":12" %}
-                            <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="">
-                                <span>{{stores.Store_name}}</span></a>
+                          {% for stores in stores|slice:":12" %}
+                          <a href="{% url 'storedetails' stores.slug %}" class="dd-link"><img src="/media/{{stores.logo}}" alt="" />
+                            <span>{{stores.Store_name}}</span></a>
                             {% endfor %}
                         </div>
                     </div>
