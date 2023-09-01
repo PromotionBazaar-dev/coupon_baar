@@ -69,8 +69,9 @@
       </header>
 
     <section class="main-store">
+      {% for categories in categories %}
         <div class="store-head" id="categoryHeading">
-          {% for categories in categories %}
+          
             <div class="store-logo" id="ctageoryImage">
                 <img src="/media/{{categories.category_image}}" alt="">
             </div>
@@ -87,8 +88,8 @@
                     <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </section>
     <div class="filter-head-container">
         <div class="filter-head">Featured Coupons</div>
