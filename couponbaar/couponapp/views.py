@@ -38,7 +38,7 @@ def categorydetailsview(request, slug):
         coupons = Coupon.objects.all()
         categories = Category.objects.all()
         context = {'stores': stores, 'coupons': coupons, 'categories': categories}
-        return render(request, 'couponapp/categorydetails.html')
+    return render(request, 'couponapp/categorydetails.html')
 
 
 def storedetailsview(request, slug):
@@ -50,7 +50,7 @@ def storedetailsview(request, slug):
         return render(request, 'couponapp/storedetails.html', context)
     else:
         messages.warning(request, 'No store found')
-        return render(request, 'couponapp/storedetails.html')
+    return render(request, 'couponapp/storedetails.html')
     
 
 def Contact_us(request):
