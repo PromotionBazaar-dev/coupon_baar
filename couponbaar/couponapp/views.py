@@ -29,28 +29,27 @@ def store(request):
 
 def categorydetailsview(request, slug):
     category_name = Category.objects.filter(slug=slug)
-    if category_name:
-        stores = Store.objects.filter(category__slug=slug)
-        context = {'stores': stores, 'category_name': category_name}
-        return render(request, 'couponapp/categorydetails.html', context)
-    else:
-        stores = Store.objects.all()
-        coupons = Coupon.objects.all()
-        categories = Category.objects.all()
-        context = {'stores': stores, 'coupons': coupons, 'categories': categories}
-    return render(request, 'couponapp/categorydetails.html')
+    stores = Store.objects.filter(category__slug=slug)
+    context = {'stores': stores, 'category_name': category_name}
+    return render(request, 'couponapp/categorydetails.html', context)
+    # else:
+    #     stores = Store.objects.all()
+    #     coupons = Coupon.objects.all()
+    #     categories = Category.objects.all()
+    #     context = {'stores': stores, 'coupons': coupons, 'categories': categories}
+    # return render(request, 'couponapp/categorydetails.html')
 
 
 def storedetailsview(request, slug):
     stores = Store.objects.filter(slug=slug)
-    if stores:
-        category_name = Category.objects.filter(slug=slug)
-        coupons = Coupon.objects.filter(Store_name__in=list(stores.values_list('store_id', flat=True)))
-        context = {'stores': stores, 'coupons': coupons, 'category_name': category_name}
-        return render(request, 'couponapp/storedetails.html', context)
-    else:
-        messages.warning(request, 'No store found')
-    return render(request, 'couponapp/storedetails.html')
+    # if stores:
+    category_name = Category.objects.filter(slug=slug)
+    coupons = Coupon.objects.filter(Store_name__in=list(stores.values_list('store_id', flat=True)))
+    context = {'stores': stores, 'coupons': coupons, 'category_name': category_name}
+    return render(request, 'couponapp/storedetails.html', context)
+    # else:
+    #     messages.warning(request, 'No store found')
+    # return render(request, 'couponapp/storedetails.html')
     
 
 def Contact_us(request):
