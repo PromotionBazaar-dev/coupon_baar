@@ -19,7 +19,7 @@
 <body>
     <div class="logo">
 
-        <a href="index"><img src="{%static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
+        <a href="/index"><img src="{%static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
         <div class="menu-search-bar">
             <input type="search" name="search" id="searchBar" placeholder="Search for coupons, deals, stores etc.">
             <button type="button">Search</button>
@@ -31,9 +31,9 @@
     <header class="homeHeader">
         <nav>
           <div class="menu">
-            <a href="/" class="nav-item">Home</a>
+            <a href="/index" class="nav-item">Home</a>
             <div class="dropdown">
-              <a href="category" class="nav-item">Category</a>
+              <a href="/category" class="nav-item">Category</a>
               <div class="dropdown-container">
                 <div class="column">
                   {% for categories in categories|slice:":12"  %}
@@ -44,7 +44,7 @@
               </div>
             </div>
             <div class="dropdown">
-              <a href="store" class="nav-item">Store</a>
+              <a href="/store" class="nav-item">Store</a>
               <div class="dropdown-container">
                 <div class="column">
                   {% for stores in stores|slice:":12" %}
@@ -54,16 +54,16 @@
                 </div>
               </div>
             </div>
-            <a href="contact" class="nav-item">Contact</a>
+            <a href="/contact" class="nav-item">Contact</a>
           </div>
           <div class="mobileMenu">
             <div class="close-menu" onclick="closeMenu()">
               <span>&times;</span>
             </div>
-            <a href="index">Home</a>
-            <a href="category">Category</a>
-            <a href="store">Stores</a>
-            <a href="contact">Contact</a>
+            <a href="/index">Home</a>
+            <a href="/category">Category</a>
+            <a href="/store">Stores</a>
+            <a href="/contact">Contact</a>
           </div>
         </nav>
       </header>
