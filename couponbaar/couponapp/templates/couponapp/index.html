@@ -109,16 +109,16 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{% static './assests/image/banner/mamaearth.jpg' %}" class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="{% static './assests/image/banner/1.png' %}" class="d-block w-100"
+        <a href=""><div class="carousel-item active">
+          <img src="{% static './assests/image/banner/1.png' %}" class="d-block w-100" alt="..." />
+        </div></a>
+        <a href=""></a><div class="carousel-item">
+          <img src="{% static './assests/image/banner/2.png' %}" class="d-block w-100"
             alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="{% static './assests/image/banner/2.png' %}" class="d-block w-100" alt="..." />
-        </div>
+        </div></a>
+        <a href=""></a><div class="carousel-item">
+          <img src="{% static './assests/image/banner/3.png' %}" class="d-block w-100" alt="..." />
+        </div></a>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
@@ -193,7 +193,7 @@
         <div class="deal-coupon">
           <a href="">
             <div class="image">
-              <img src="{% static './assests/image/product_banner/lancome-1692616040.jpg' %}" alt="" />
+              <img src="{% static './assests/image/product_banner/scb.jpg' %}" alt="" />
             </div>
             <div class="button-container">
               <button type="button">Get Deal</button>
@@ -346,34 +346,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/beardo.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Upto 63% OFF</h1>
+              <span>Beardo Ultimate Monsoon Essentials Combo</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00001" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00001">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00001" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/beardo.png' %}" alt="" />
+              <span>Beardo Ultimate Monsoon Essentials Combo</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00001">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00001">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -382,36 +380,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/nykaa.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Min 40% OFF + Extra 10% OFF</h1>
+              <span>Find The Best Deals on Nykaa and Grab the Best Offers.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00002" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00002">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00002" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/nykaa.png' %}" alt="" />
+              <span>Find The Best Deals on Nykaa and Grab the Best Offers.</span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00002">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00002">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -420,34 +414,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304"><img src="{% static './assests/image/logo/netmeds.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Flat 50% Cashback + 20% OFF  </h1>
+              <span>Place Your First Order and get Flat 25% OFF on meds and Upto 50% Cashback.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00003" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00003">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00003" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/netmeds.png' %}" alt="" />
+              <span>Place Your First Order and get Flat 25% OFF on meds and Upto 50% Cashback.</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00003">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00003">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -456,36 +448,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304"><img src="{% static './assests/image/logo/healthkart.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Upto 40% OFF + 10% OFF</h1>
+              <span>Grab The Best Deal to Get the Huge discount on Nutritions On HEALTHKART</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00004" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00004">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00004" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/healthkart.png' %}" alt="" />
+              <span>Grab The Best Deal to Get the Huge discount on Nutritions On HEALTHKART</span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00004">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00004">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -494,34 +482,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304"><img src="{% static './assests/image/logo/firstcry.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Get Upto 40% - 50% OFF</h1>
+              <span>Buy Child Products on Firstcry.com and Get Discount upto 80%.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00005" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00005">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00005" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/firstcry.png' %}" alt="" />
+              <span>Buy Child Products on Firstcry.com and Get Discount upto 80%.</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00005">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00005">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -530,36 +516,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304"><img src="{% static './assests/image/logo/croma-logo.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Upto 60% Off</h1>
+              <span>Buy Electronics Products Only on Croma.com and recieve a facinating Discount on every product</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00006" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00006">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00006" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/croma-logo.png' %}" alt="" />
+              <span>Buy Electronics Products Only on Croma.com and recieve a facinating Discount on every product</span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00006">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00006">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -568,34 +550,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/firstcry.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Upto 35% Off</h1>
+              <span>Find all the Deals on FirstCry.com with upto 35% minimum Discount</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00007" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00007">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00007" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/firstcry.png' %}" alt="" />
+              <span>Find all the Deals on FirstCry.com with upto 35% minimum Discount</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00007">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00007">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -604,36 +584,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/happily.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Get Upto 30% Off</h1>
+              <span>Buy Dried Fruits From Online Store in India Hassle-Free and Get Upto 30% Discount.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00008" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00008">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00008" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/happily.png' %}" alt="" />
+              <span>Buy Dried Fruits From Online Store in India Hassle-Free and Get Upto 30% Discount.  </span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00008">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00008">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -642,34 +618,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/nykaa.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Get Upto 50% Off</h1>
+              <span>Shop on Nykaa and find the best fashion deals with huge discounts upto 50% off</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00009" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00009">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00009" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/nykaa.png' %}" alt="" />
+              <span>Shop on Nykaa and find the best fashion deals with huge discounts upto 50% off</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00009">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00009">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -678,36 +652,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/bombayShavingCompany.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Best Deal</h1>
+              <span>Find the Best Deals only on Bombay Shaving Company.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00010" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00010">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00010" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/bombayShavingCompany.png' %}" alt="" />
+              <span>Find the Best Deals only on Bombay Shaving Company.</span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00010">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00010">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -716,34 +686,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/heathians.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <h1>Starting @399</h1>
+              <span>Book a Doctor Consultation + Health Test Combo with Healthians and get Upto 50% OFF.</span>
             </div>
             <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
+                  data-modal="modal-00011" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal-container" id="modal-00011">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00011" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/heathians.png' %}" alt="" />
+              <span>Book a Doctor Consultation + Health Test Combo with Healthians and get Upto 50% OFF.</span>
               <div class="code">
-                <span id="couponCode1">CouponBaar</span>
+                <span id="couponCode00011">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00011">
                   Copy Code
                 </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -752,110 +720,32 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
+              <a href=""><img src="{% static './assests/image/logo/onePlus.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
+              <h1>Best Deals</h1>
+              <span>Get Best Deals of the Day on One Plus Online Store and Enjoy a Huge Discount on every Product</span>
             </div>
             <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
+                  data-modal="modal-00012" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
           </div>
-          <div class="coupon-modal-container" id="modal-2">
+          <div class="coupon-modal-container" id="modal-00012">
             <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
+              <span class="close" data-modal="modal-00012" id="close">&times;</span>
+              <img src="{% static './assests/image/logo/onePlus.png' %}" alt="" />
+              <span>Get Best Deals of the Day on One Plus Online Store and Enjoy a Huge Discount on every Product</span>
               <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
+                <span id="couponCode00012">Not Required</span>
               </div>
               <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
+                <button type="button" id="copy" data-clipboard-target="#couponCode00012">
                   Copy Code
                 </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
-                    Now</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coupon-container coupon-hide">
-          <div class="coupon">
-            <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
-            </div>
-            <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
-            </div>
-            <div class="show-code">
-              <a href="https://www.facebook.com/" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-1" id="openCoupon">
-                  Show Code
-                </button></a>
-            </div>
-          </div>
-          <div class="coupon-modal-container" id="modal-1">
-            <div class="coupon-modal">
-              <span class="close" data-modal="modal-1" id="close">&times;</span>
-              <img src="./assests/image/logo/adidas.png" alt="" />
-              <span>Get up to 30% off on Man Shoes Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Voluptatem, alias.</span>
-              <div class="code">
-                <span id="couponCode1">CouponBaar</span>
-              </div>
-              <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode1">
-                  Copy Code
-                </button>
-                <a href="https://www.facebook.com/" target="_blank"><button type="button" id="shopNow">Shop
-                    Now</button></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="coupon-container coupon-hide">
-          <div class="coupon">
-            <div class="coupon-logo">
-              <a href=""><img src="./assests/image/logo/beardo.png" alt="" /></a>
-            </div>
-            <div class="couponp-description">
-              <h1>Upto 30% Off</h1>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Mollitia velit commodi placeat laborum totam voluptatibus!
-                Voluptatem, alias.</span>
-            </div>
-            <div class="show-code">
-              <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-2" id="openCoupon">
-                  Show Code
-                </button></a>
-            </div>
-          </div>
-          <div class="coupon-modal-container" id="modal-2">
-            <div class="coupon-modal">
-              <span class="close" data-modal="modal-2" id="close">&times;</span>
-              <img src="./assests/image/logo/beardo.png" alt="" />
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestias fuga obcaecati neque nihil consequatur provident.
-                Voluptatem, alias.</span>
-              <div class="code">
-                <span id="couponCode2">CouponBeardo</span>
-              </div>
-              <div class="btn">
-                <button type="button" id="copy" data-clipboard-target="#couponCode2">
-                  Copy Code
-                </button>
-                <a href="https://www.instagram.com/" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
