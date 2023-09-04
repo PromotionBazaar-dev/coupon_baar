@@ -69,6 +69,6 @@ def privacyandpolicy(request):
 def termsofservice(request):
     return render(request, 'couponapp/termsofservice.html')
 
-# def navbaar2(request):
-#     return render(request, 'couponapp/navbaar2.html')
+def BingSiteAuth(request):
+    return render(request, 'couponapp/BingSiteAuth.xml')
 
