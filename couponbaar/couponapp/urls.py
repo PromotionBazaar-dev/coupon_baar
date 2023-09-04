@@ -12,6 +12,6 @@ urlpatterns = [
     path('licence', views.licence, name = 'licence'),
     path('privacyandpolicy', views.privacyandpolicy, name = 'privacyandpolicy'),
     path('termsofservice', views.termsofservice, name = 'termsofservice'),
-    # path('navbaar2', views.navbaar2, name = 'navbaar2'),
+    path('BingSiteAuth', views.BingSiteAuth, name = 'BingSiteAuth'),
 
 ]
