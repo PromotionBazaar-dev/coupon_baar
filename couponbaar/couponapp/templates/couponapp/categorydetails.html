@@ -88,11 +88,11 @@
 
     <section class="main-store">
         <div class="store-head" id="categoryHeading">
+            {% for categories in categories %}
             <div class="store-logo" id="ctageoryImage">
-                {% for categories in categories %}
                 <img src="/media/{{categories.category_name}}" alt="">
-                {% endfor %}
             </div>
+            {% endfor %}
             <div class="border">
             </div>
             <div class="store-content">
