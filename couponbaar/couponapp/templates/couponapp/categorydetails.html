@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Category Details</title>
     <link rel="stylesheet" href="{% static './assests/style/style.css'%}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -69,9 +69,8 @@
       </header>
 
     <section class="main-store">
-      {% for categories in categories %}
         <div class="store-head" id="categoryHeading">
-          
+          {% for categories in categories %}
             <div class="store-logo" id="ctageoryImage">
                 <img src="/media/{{categories.category_image}}" alt="">
             </div>
@@ -82,14 +81,14 @@
                     Trending {{categories.category_image}} Stores in 2023
                 </div>
                 <div class="store-coupon-count">
-                    7 Stores and 158 Coupons
+                    Stores and Coupons
                 </div>
                 <div class="ratings">
                     <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </section>
     <div class="filter-head-container">
         <div class="filter-head">Featured Coupons</div>
@@ -110,41 +109,43 @@
             </div>
         </div>
         <div class="coupons-wrapper">
+          {% for coupons in coupons %}
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/myntra.png" alt=""></a>
+                      {% for categories in categories%}
+                        <a href=""><img src="/media/{{categories.category_image}}" alt=""></a>
+                        {% endfor %}
                     </div>
                     <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
+                        <h1>{{coupons.discount}}</h1>
+                        <span>{{coupons.coupon_description}}</span>
                     </div>
                     <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-1" id="openCoupon">Show Code</button></a>
+                        <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
+                                type="button" data-modal="modal-{{coupons.coupon_id}}" id="openCoupon">Show Code</button></a>
                     </div>
                 </div>
-                <div class="coupon-modal-container" id="modal-1">
+                <div class="coupon-modal-container" id="modal-{{coupons.coupon_id}}">
                     <div class="coupon-modal">
-                        <span class="close" data-modal="modal-1" id="close">&times;</span>
-                        <img src="./assests/image/logo/myntra.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
+                        <span class="close" data-modal="modal-{{coupons.coupon_id}}" id="close">&times;</span>
+                        {% for stores in stores%}
+                        <img src="/media/{{categories.category_image}}" alt="">
+                        {% endfor %}
+                        <span>{{coupons.coupon_description}}</span>
                         <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
+                            <span id="couponCode2">{{coupons.coupon_code}}</span>
                         </div>
                         <div class="btn">
                             <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
+                            <a href="{{coupons.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
                                     Now</button></a>
                         </div>
 
                     </div>
                     <!-- </div> -->
                 </div>
+                {% endfor %}
             </div>
             <div class="coupons-container" data-item="adidas">
                 <div class="coupons">
