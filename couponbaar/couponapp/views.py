@@ -69,6 +69,3 @@ def privacyandpolicy(request):
 def termsofservice(request):
     return render(request, 'couponapp/termsofservice.html')
 
-def BingSiteAuth(request):
-    return render(request, 'couponapp/BingSiteAuth.xml')
-
