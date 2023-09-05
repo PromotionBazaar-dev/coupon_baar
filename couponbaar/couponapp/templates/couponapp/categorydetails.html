@@ -143,9 +143,7 @@
                 <div class="coupon-modal-container" id="modal-{{coupons.coupon_id}}">
                     <div class="coupon-modal">
                         <span class="close" data-modal="modal-{{coupons.coupon_id}}" id="close">&times;</span>
-                        {% for stores in stores %}
                         <img src="/media/{{stores.logo}}" alt="">
-                        {% endfor %}
                         <span>{{coupons.coupon_description}}</span>
                         <div class="code">
                             <span id="couponCode2">{{coupons.coupon_code}}</span>
