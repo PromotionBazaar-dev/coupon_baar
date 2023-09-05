@@ -96,11 +96,11 @@
             <div class="border">
             </div>
             <div class="store-content">
+                {% for categories in categories%}
                 <div class="store-description">
-                    {% for catories in categories%}
                     Trending {{categories.category_name}} Stores in 2023
-                    {% endfor %}
                 </div>
+                {% endfor %}
                 <div class="store-coupon-count">
                     Stores and Coupons
                 </div>
