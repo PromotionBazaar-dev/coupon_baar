@@ -139,7 +139,9 @@
                     </div>
                     <div class="show-code">
                         <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-{{coupons.coupon_id}}" id="openCoupon">Show Code</button></a>
+                            {% for stores in stores%}
+                                type="button" data-modal="modal-{{stores.store_id}}" id="openCoupon">Show Code</button></a>
+                                {% endfor %}
                     </div>
                 </div>
                 <div class="coupon-modal-container" id="modal-{{coupons.coupon_id}}">
