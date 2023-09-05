@@ -129,7 +129,9 @@
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
-                        <a href=""><img src="./assest/" alt=""></a>
+                        {% for stores in stores%}
+                        <a href=""><img src="/media/{{stores.logo.store_id}}" alt=""></a>
+                        {% endfor %}
                     </div>
                     <div class="coupon-description">
                         <h1>{{coupons.discount}}</h1>
