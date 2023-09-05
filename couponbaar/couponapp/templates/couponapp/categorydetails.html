@@ -108,8 +108,8 @@
                 <div class="filters" data-filter="faq"><input type="radio" name="filter" id="faq" value="filter"><label for="faq">Faq</label></div>
             </div>
         </div>
-        {% for coupons in coupons %}
         <div class="coupons-wrapper">
+          {% for coupons in coupons %}
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
@@ -145,8 +145,8 @@
                     </div>
                     <!-- </div> -->
                 </div>
+                {% endfor %}
             </div>
-          {% endfor %}
 
     <section class="container-category">
         <div class="all-category-heading">
