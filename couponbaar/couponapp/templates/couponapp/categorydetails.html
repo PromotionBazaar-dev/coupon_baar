@@ -34,18 +34,18 @@
                 <a href="/index" class="nav-item">Home</a>
                 <div class="dropdown">
                     <a href="/category" class="nav-item">Category</a>
-                    <div class="dropdown-container">
+                    <!-- <div class="dropdown-container">
                         <div class="column">
                             <a href="categorydetails.html" class="dd-link"><img src="./assests/image/logo/Acerlogo.png"
                                     alt="">
                                 <span>Home</span></a>
 
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="nav-item">Store</a>
-                    <div class="dropdown-container">
+                    <a href="/store.html" class="nav-item">Store</a>
+                    <!-- <div class="dropdown-container">
                         <div class="column">
                             <a href="#" class="dd-link"><img src="./assests/image/logo/Acerlogo.png" alt="">
                                 <span>Acer</span></a>
@@ -71,17 +71,17 @@
                                 <span>Acer</span></a>
 
 
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <a href="contact.html">Contact</a>
+                <a href="/contact">Contact</a>
             </div>
             <div class="mobileMenu">
                 <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
-                <a href="index.html">Home</a>
-                <a href="Category.html">Category</a>
-                <a href="store.html">Stores</a>
-                <a href="contact.html">Contact</a>
+                <a href="/index">Home</a>
+                <a href="category">Category</a>
+                <a href="/store">Stores</a>
+                <a href="/contact">Contact</a>
             </div>
         </nav>
     </header>
@@ -89,16 +89,20 @@
     <section class="main-store">
         <div class="store-head" id="categoryHeading">
             <div class="store-logo" id="ctageoryImage">
-                <img src="./assests/image/category/fashion.png" alt="">
+                {% for categories in categories %}
+                <img src="/media/{{categories.category_name}}" alt="">
+                {% endfor %}
             </div>
             <div class="border">
             </div>
             <div class="store-content">
                 <div class="store-description">
-                    Trending Fashion Stores in 2023
+                    {% for catories in categories%}
+                    Trending {{categories.category_name}} Stores in 2023
+                    {% endfor %}
                 </div>
                 <div class="store-coupon-count">
-                    7 Stores and 158 Coupons
+                    Stores and Coupons
                 </div>
                 <div class="ratings">
                     <span style="color: gold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
