@@ -120,17 +120,17 @@
                 Filter
             </div>
             <div class="filter-container">
+                {% for stores in stores %}
                 <div class="filters active" data-filter="all"><input type="radio" name="filter" id="all" value="filter"><label for="all">All Stores</label></div>
-                <div class="filters" data-filter="myntra"><input type="radio" name="filter" id="myntra" value="filter"><label for="myntra">Myntra</label></div>
-                <div class="filters" data-filter="adidas"><input type="radio" name="filter" id="adidas" value="filter"><label for="adidas">Adidas</span></div>
-                <div class="filters" data-filter="giva"><input type="radio" name="filter" id="giva" value="filter"><label for="giva">Giva</label></div>
-                <div class="filters" data-filter="ajio"><input type="radio" name="filter" id="ajio" value="filter"><label for="ajio">Ajio</label></div>
-                <div class="filters" data-filter="faq"><input type="radio" name="filter" id="faq" value="filter"><label for="faq">Faq</label></div>
+                <div class="filters" data-filter="{{stores.Store_name}}"><input type="radio" name="filter" id="myntra" value="filter"><label for="myntra">{{stores.Store_name}}</label></div>
+                {% endfor %}
             </div>
         </div>
         <div class="coupons-wrapper">
             {% for coupons in coupons %}
-            <div class="coupons-container" data-item="myntra">
+               {% for stores in stores %}
+            <div class="coupons-container" data-item="{{stores.Store_name}}">
+                {% endfor %}
                 <div class="coupons">
                     <div class="coupons-logo">
                         {% for stores in stores%}
