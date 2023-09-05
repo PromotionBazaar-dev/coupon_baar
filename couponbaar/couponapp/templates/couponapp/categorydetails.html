@@ -108,8 +108,8 @@
                 <div class="filters" data-filter="faq"><input type="radio" name="filter" id="faq" value="filter"><label for="faq">Faq</label></div>
             </div>
         </div>
+        {% for coupons in coupons %}
         <div class="coupons-wrapper">
-          {% for coupons in coupons %}
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
@@ -145,118 +145,8 @@
                     </div>
                     <!-- </div> -->
                 </div>
-                {% endfor %}
             </div>
-            <div class="coupons-container" data-item="adidas">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/adidas.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-2" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-2">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-2" id="close">&times;</span>
-                        <img src="./assests/image/logo/adidas.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
-                                    Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="coupons-container" data-item="ajio">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/Ajio.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-3" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-3">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-3" id="close">&times;</span>
-                        <img src="./assests/image/logo/Ajio.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
-                                    Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="coupons-container" data-item="giva">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/giva.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-4" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-4">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-4" id="close">&times;</span>
-                        <img src="./assests/image/logo/giva.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
-                                    Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-        </div>
-    </section>
+          {% endfor %}
 
     <section class="container-category">
         <div class="all-category-heading">
