@@ -38,10 +38,11 @@
           <a href="category" class="nav-item">Category</a>
           <div class="dropdown-container">
             <div class="column">
-              {% for categories in categories|slice:":12"  %}
-              <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img src="/media/{{categories.category_image}}" alt="" />
+              {% for categories in categories|slice:":12" %}
+              <a href="{% url 'categorydetails' categories.slug %}" class="dd-link"><img
+                  src="/media/{{categories.category_image}}" alt="" />
                 <span>{{categories.category_name}}</span></a>
-                {% endfor %}
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -52,7 +53,7 @@
               {% for stores in stores|slice:":12" %}
               <a href="{% url 'storedetails' stores.slug %}" class="dd-link"><img src="/media/{{stores.logo}}" alt="" />
                 <span>{{stores.Store_name}}</span></a>
-                {% endfor %}
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -110,16 +111,18 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
-        <a href="https://trk.couponbaar.com/click?campaign_id=1154&pub_id=1304"><div class="carousel-item active">
-          <img src="{% static './assests/image/banner/1.png' %}" class="d-block w-100" alt="..." />
-        </div></a>
-        <a href="https://trk.couponbaar.com/click?campaign_id=1164&pub_id=1304"><div class="carousel-item">
-          <img src="{% static './assests/image/banner/2.png' %}" class="d-block w-100"
-            alt="..." />
-        </div></a>
-        <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304"><div class="carousel-item">
-          <img src="{% static './assests/image/banner/3.png' %}" class="d-block w-100" alt="..." />
-        </div></a>
+        <div class="carousel-item active"><a href="https://trk.couponbaar.com/click?campaign_id=1154&pub_id=1304">
+          <img src="{% static './assests/image/banner/1.png' %}" class="d-block w-100" alt="..." /></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://trk.couponbaar.com/click?campaign_id=1164&pub_id=1304"> <img
+              src="{% static './assests/image/banner/2.png' %}" class="d-block w-100" alt="..." /></a>
+        </div>
+        
+          <div class="carousel-item">
+            <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304"><img src="{% static './assests/image/banner/3.png' %}" class="d-block w-100" alt="..." /></a>
+          </div>
+        
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
@@ -132,54 +135,55 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
+
   </section>
 
-      <section class="featured-offers">
-        <div class="featured-filter-bar">
-            <div class="filter-link" active-filter" data-filtered="featured">Featured Offers</div>
-            <div class="filter-link" data-filtered="travel">Travel</div>
-            <div class="filter-link" data-filtered="fashion">Fashion</div>
-            <div class="filter-link" data-filtered="technology">Technology</div>
-            <div class="filter-link"><a href="store">View All</a></div>
+  <section class="featured-offers">
+    <div class="featured-filter-bar">
+      <div class="filter-link" active-filter" data-filtered="featured">Featured Offers</div>
+      <div class="filter-link" data-filtered="travel">Travel</div>
+      <div class="filter-link" data-filtered="fashion">Fashion</div>
+      <div class="filter-link" data-filtered="technology">Technology</div>
+      <div class="filter-link"><a href="store">View All</a></div>
+    </div>
+    <div class="coupon-wrapper">
+      <div class="coupon-container" data-item="fashion">
+        <div class="coupon">
+          <div class="coupon-logo">
+            <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
+          </div>
+          <div class="couponp-description">
+            <h1>FLAT 83% OFF</h1>
+            <span>AJIO CLEARANCE SALE 2023: FLAT 83% OFF</span>
+          </div>
+          <div class="show-code">
+            <a href="https://www.ajio.com/s/noexchnoreturn-5131-70341/?utm_source=Admitad&utm_medium=Affiliate&utm_campaign=e2666dff3fd71c41c2b364558eb2a034"
+              class="delayLink"><button type="button" class="modal-button" data-modal="modal-1" id="openCoupon">
+                Show Code
+              </button></a>
+          </div>
         </div>
-        <div class="coupon-wrapper">
-          <div class="coupon-container" data-item="fashion">
-            <div class="coupon">
-              <div class="coupon-logo">
-                <a href=""><img src="./assests/image/logo/adidas.png" alt="" /></a>
-              </div>
-              <div class="couponp-description">
-                <h1>FLAT 83% OFF</h1>
-                <span>AJIO CLEARANCE SALE 2023: FLAT 83% OFF</span>
-              </div>
-              <div class="show-code">
-                <a href="https://www.ajio.com/s/noexchnoreturn-5131-70341/?utm_source=Admitad&utm_medium=Affiliate&utm_campaign=e2666dff3fd71c41c2b364558eb2a034" class="delayLink"><button type="button" class="modal-button"
-                    data-modal="modal-1" id="openCoupon">
-                    Show Code
-                  </button></a>
-              </div>
+        <div class="coupon-modal-container" id="modal-1">
+          <div class="coupon-modal">
+            <span class="close" data-modal="modal-1" id="close">&times;</span>
+            <img src="./assests/image/logo/adidas.png" alt="" />
+            <span>AJIO CLEARANCE SALE 2023: FLAT 83% OFF</span>
+            <div class="code">
+              <span id="couponCode1">NOEXCHNORETURN</span>
             </div>
-            <div class="coupon-modal-container" id="modal-1">
-              <div class="coupon-modal">
-                <span class="close" data-modal="modal-1" id="close">&times;</span>
-                <img src="./assests/image/logo/adidas.png" alt="" />
-                <span>AJIO CLEARANCE SALE 2023: FLAT 83% OFF</span>
-                <div class="code">
-                  <span id="couponCode1">NOEXCHNORETURN</span>
-                </div>
-                <div class="btn">
-                  <button type="button" id="copy" data-clipboard-target="#couponCode1">
-                    Copy Code
-                  </button>
-                  <a href="https://www.ajio.com/s/noexchnoreturn-5131-70341/?utm_source=Admitad&utm_medium=Affiliate&utm_campaign=e2666dff3fd71c41c2b364558eb2a034" target="_blank"><button type="button" id="shopNow">Shop
-                      Now</button></a>
-                </div>
-              </div>
+            <div class="btn">
+              <button type="button" id="copy" data-clipboard-target="#couponCode1">
+                Copy Code
+              </button>
+              <a href="https://www.ajio.com/s/noexchnoreturn-5131-70341/?utm_source=Admitad&utm_medium=Affiliate&utm_campaign=e2666dff3fd71c41c2b364558eb2a034"
+                target="_blank"><button type="button" id="shopNow">Shop
+                  Now</button></a>
             </div>
           </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
   <section class="best-deal">
     <div class="deal-head-container">
@@ -187,8 +191,7 @@
     </div>
 
     <div class="deal-container">
-      <button class="arrowBtn" id="left" ><i class="fa-solid fa-chevron-left"
-          style="color: #000000;"></i></button>
+      <button class="arrowBtn" id="left"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i></button>
       <div class="best-deal-wrapper">
 
         <div class="deal-coupon">
@@ -242,10 +245,10 @@
           </a>
 
         </div>
-        
+
       </div>
       <button class="arrowBtn" id="right" data-slider-next><i class="fa-solid fa-chevron-right"
-        style="color: #000000;"></i></button>
+          style="color: #000000;"></i></button>
     </div>
   </section>
   <section class="best-deal">
@@ -254,8 +257,7 @@
     </div>
 
     <div class="deal-container">
-      <button class="arrowBtn" id="left" ><i class="fa-solid fa-chevron-left"
-          style="color: #000000;"></i></button>
+      <button class="arrowBtn" id="left"><i class="fa-solid fa-chevron-left" style="color: #000000;"></i></button>
       <div class="best-deal-wrapper">
 
         <div class="deal-coupon">
@@ -309,10 +311,10 @@
           </a>
 
         </div>
-        
+
       </div>
       <button class="arrowBtn" id="right" data-slider-next><i class="fa-solid fa-chevron-right"
-        style="color: #000000;"></i></button>
+          style="color: #000000;"></i></button>
     </div>
   </section>
   <section class="category-wrapper">
@@ -325,7 +327,8 @@
         {% for categories in categories%}
         <div class="category">
           <div class="category-logo">
-            <a href="{% url 'categorydetails' categories.slug %}"><img src="/media/{{categories.category_image}}" alt="" /></a>
+            <a href="{% url 'categorydetails' categories.slug %}"><img src="/media/{{categories.category_image}}"
+                alt="" /></a>
             <div class="offer-count">
               <a href="{% url 'categorydetails' categories.slug %}"> <span>14 Coupons</span></a>
             </div>
@@ -354,8 +357,8 @@
               <span>Beardo Ultimate Monsoon Essentials Combo</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00001" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00001" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -372,7 +375,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00001">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1152&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -388,8 +392,8 @@
               <span>Find The Best Deals on Nykaa and Grab the Best Offers.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00002" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00002" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -406,7 +410,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00002">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1153&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -415,15 +420,16 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304"><img src="{% static './assests/image/logo/netmeds.png' %}" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304"><img
+                  src="{% static './assests/image/logo/netmeds.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
-              <h1>Flat 50% Cashback + 20% OFF  </h1>
+              <h1>Flat 50% Cashback + 20% OFF </h1>
               <span>Place Your First Order and get Flat 25% OFF on meds and Upto 50% Cashback.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00003" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00003" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -440,7 +446,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00003">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1155&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -449,15 +456,16 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304"><img src="{% static './assests/image/logo/healthkart.png' %}" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304"><img
+                  src="{% static './assests/image/logo/healthkart.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
               <h1>Upto 40% OFF + 10% OFF</h1>
               <span>Grab The Best Deal to Get the Huge discount on Nutritions On HEALTHKART</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00004" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00004" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -474,7 +482,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00004">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1156&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -483,15 +492,16 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304"><img src="{% static './assests/image/logo/firstcry.png' %}" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304"><img
+                  src="{% static './assests/image/logo/firstcry.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
               <h1>Get Upto 40% - 50% OFF</h1>
               <span>Buy Child Products on Firstcry.com and Get Discount upto 80%.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00005" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00005" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -508,7 +518,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00005">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1157&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -517,15 +528,16 @@
         <div class="coupon-container coupon-hide">
           <div class="coupon">
             <div class="coupon-logo">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304"><img src="{% static './assests/image/logo/croma-logo.png' %}" alt="" /></a>
+              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304"><img
+                  src="{% static './assests/image/logo/croma-logo.png' %}" alt="" /></a>
             </div>
             <div class="couponp-description">
               <h1>Upto 60% Off</h1>
               <span>Buy Electronics Products Only on Croma.com and recieve a facinating Discount on every product</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00006" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00006" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -542,7 +554,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00006">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1158&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -558,8 +571,8 @@
               <span>Find all the Deals on FirstCry.com with upto 35% minimum Discount</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00007" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00007" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -576,7 +589,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00007">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -592,8 +606,8 @@
               <span>Buy Dried Fruits From Online Store in India Hassle-Free and Get Upto 30% Discount.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00008" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00008" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -602,7 +616,7 @@
             <div class="coupon-modal">
               <span class="close" data-modal="modal-00008" id="close">&times;</span>
               <img src="{% static './assests/image/logo/happily.png' %}" alt="" />
-              <span>Buy Dried Fruits From Online Store in India Hassle-Free and Get Upto 30% Discount.  </span>
+              <span>Buy Dried Fruits From Online Store in India Hassle-Free and Get Upto 30% Discount. </span>
               <div class="code">
                 <span id="couponCode00008">Not Required</span>
               </div>
@@ -610,7 +624,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00008">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1159&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -626,8 +641,8 @@
               <span>Shop on Nykaa and find the best fashion deals with huge discounts upto 50% off</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00009" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00009" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -644,7 +659,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00009">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1160&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -660,8 +676,8 @@
               <span>Find the Best Deals only on Bombay Shaving Company.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00010" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00010" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -678,7 +694,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00010">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1161&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -694,8 +711,8 @@
               <span>Book a Doctor Consultation + Health Test Combo with Healthians and get Upto 50% OFF.</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" class="delayLink"><button type="button" class="modal-button"
-                  data-modal="modal-00011" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" class="delayLink"><button
+                  type="button" class="modal-button" data-modal="modal-00011" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -712,7 +729,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00011">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1162&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -728,8 +746,8 @@
               <span>Get Best Deals of the Day on One Plus Online Store and Enjoy a Huge Discount on every Product</span>
             </div>
             <div class="show-code">
-              <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" class="delayLink"><button class="modal-button" type="button"
-                  data-modal="modal-00012" id="openCoupon">
+              <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" class="delayLink"><button
+                  class="modal-button" type="button" data-modal="modal-00012" id="openCoupon">
                   Show Code
                 </button></a>
             </div>
@@ -746,7 +764,8 @@
                 <button type="button" id="copy" data-clipboard-target="#couponCode00012">
                   Copy Code
                 </button>
-                <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" target="_blank"><button type="button" id="shopNow">Shop
+                <a href="https://trk.couponbaar.com/click?campaign_id=1163&pub_id=1304" target="_blank"><button
+                    type="button" id="shopNow">Shop
                     Now</button></a>
               </div>
             </div>
@@ -761,74 +780,74 @@
 
   <section class="faq-container">
     <div class="faq">
-        <div class="faq-logo">
-            <img src="{% static './assests/image/logo/faq.png' %}" alt="">
-            <h2>Frequently Asked Questions</h2>
+      <div class="faq-logo">
+        <img src="{% static './assests/image/logo/faq.png' %}" alt="">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="questions">
+        <div class="faq-question reveal">
+          <h2>How long do coupon codes last?</h2>
         </div>
-        <div class="questions">
-            <div class="faq-question reveal">
-                <h2>How long do coupon codes last?</h2>
-            </div>
+      </div>
+      <div class="faq-answer reveal">
+        <p>
+          Many nykaa discount codes last for 5 to 7 days. However, each nykaa
+          coupon code has its own start and end date. Some coupons for nykaa
+          will only last 24 hours and some will last 3 days. Make sure to check the
+          expiration dates on this page. You can check the dates on the description
+          of the promo code. Also, some nykaa coupons will be active until the
+          promotional item runs out of stock.
+        </p>
+      </div>
+
+      <div class="questions">
+        <div class="faq-question reveal">
+          <h2>How long do coupon codes last?</h2>
         </div>
         <div class="faq-answer reveal">
-            <p>
-                Many nykaa discount codes last for 5 to 7 days. However, each nykaa
-                coupon code has its own start and end date. Some coupons for nykaa
-                will only last 24 hours and some will last 3 days. Make sure to check the
-                expiration dates on this page. You can check the dates on the description
-                of the promo code. Also, some nykaa coupons will be active until the
-                promotional item runs out of stock.
-            </p>
+          <p>
+            Many nykaa discount codes last for 5 to 7 days. However, each nykaa
+            coupon code has its own start and end date. Some coupons for nykaa
+            will only last 24 hours and some will last 3 days. Make sure to check the
+            expiration dates on this page. You can check the dates on the description
+            of the promo code. Also, some nykaa coupons will be active until the
+            promotional item runs out of stock.
+          </p>
         </div>
-
-        <div class="questions">
-            <div class="faq-question reveal">
-                <h2>How long do coupon codes last?</h2>
-            </div>
-            <div class="faq-answer reveal">
-                <p>
-                    Many nykaa discount codes last for 5 to 7 days. However, each nykaa
-                    coupon code has its own start and end date. Some coupons for nykaa
-                    will only last 24 hours and some will last 3 days. Make sure to check the
-                    expiration dates on this page. You can check the dates on the description
-                    of the promo code. Also, some nykaa coupons will be active until the
-                    promotional item runs out of stock.
-                </p>
-            </div>
+      </div>
+      <div class="questions">
+        <div class="faq-question reveal">
+          <h2>How long do coupon codes last?</h2>
         </div>
-        <div class="questions">
-            <div class="faq-question reveal">
-                <h2>How long do coupon codes last?</h2>
-            </div>
-            <div class="faq-answer reveal">
-                <p>
-                    Many nykaa discount codes last for 5 to 7 days. However, each nykaa
-                    coupon code has its own start and end date. Some coupons for nykaa
-                    will only last 24 hours and some will last 3 days. Make sure to check the
-                    expiration dates on this page. You can check the dates on the description
-                    of the promo code. Also, some nykaa coupons will be active until the
-                    promotional item runs out of stock.
-                </p>
-            </div>
+        <div class="faq-answer reveal">
+          <p>
+            Many nykaa discount codes last for 5 to 7 days. However, each nykaa
+            coupon code has its own start and end date. Some coupons for nykaa
+            will only last 24 hours and some will last 3 days. Make sure to check the
+            expiration dates on this page. You can check the dates on the description
+            of the promo code. Also, some nykaa coupons will be active until the
+            promotional item runs out of stock.
+          </p>
         </div>
-        <div class="questions">
-            <div class="faq-question reveal">
-                <h2>How long do coupon codes last?</h2>
-            </div>
-            <div class="faq-answer reveal">
-                <p>
-                    Many nykaa discount codes last for 5 to 7 days. However, each nykaa
-                    coupon code has its own start and end date. Some coupons for nykaa
-                    will only last 24 hours and some will last 3 days. Make sure to check the
-                    expiration dates on this page. You can check the dates on the description
-                    of the promo code. Also, some nykaa coupons will be active until the
-                    promotional item runs out of stock.
-                </p>
-            </div>
+      </div>
+      <div class="questions">
+        <div class="faq-question reveal">
+          <h2>How long do coupon codes last?</h2>
         </div>
+        <div class="faq-answer reveal">
+          <p>
+            Many nykaa discount codes last for 5 to 7 days. However, each nykaa
+            coupon code has its own start and end date. Some coupons for nykaa
+            will only last 24 hours and some will last 3 days. Make sure to check the
+            expiration dates on this page. You can check the dates on the description
+            of the promo code. Also, some nykaa coupons will be active until the
+            promotional item runs out of stock.
+          </p>
+        </div>
+      </div>
 
     </div>
-</section>
+  </section>
 
   <section class="footer">
     <div class="footer-container">
@@ -858,12 +877,10 @@
               <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="store">Stores</a>
             </div>
             <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                href="category">Category</a>
+              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="category">Category</a>
             </div>
             <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                href="contact">Contact</a>
+              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="contact">Contact</a>
             </div>
           </div>
         </div>
