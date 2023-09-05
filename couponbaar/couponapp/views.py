@@ -31,7 +31,7 @@ def categorydetailsview(request, slug):
     category_name = Category.objects.filter(slug=slug)
     if category_name:
         stores = Store.objects.filter(category__slug=slug)
-        coupons = Coupon.objects.filter(category_name__in=list(categories.values_list('category_id', flat=True)))
+        coupons = Coupon.objects.filter(category_name__in=list(category.values_list('category_id', flat=True)))
         context = {'stores': stores, 'category_name': category_name, 'coupons': coupons}
         return render(request, 'couponapp/categorydetails.html', context)
     else:
