@@ -28,11 +28,11 @@ def store(request):
     return render(request, 'couponapp/store.html', context)
 
 def categorydetailsview(request, slug):
-    categorories_name = Category.objects.filter(slug=slug)
-    if categorories_name:
+    categories = Category.objects.filter(slug=slug)
+    if categories:
         stores = Store.objects.filter(category__slug=slug)
-        coupons = Coupon.objects.filter(Category__in=list(categorories_name.values_list('category_id', flat=True)))
-        context = {'stores': stores, 'categorories_name': categorories_name, 'coupons': coupons}
+        coupons = Coupon.objects.filter(Category__in=list(categories.values_list('category_id', flat=True)))
+        context = {'stores': stores, 'categories': categories, 'coupons': coupons}
         return render(request, 'couponapp/categorydetails.html', context)
     else:
         stores = Store.objects.all()

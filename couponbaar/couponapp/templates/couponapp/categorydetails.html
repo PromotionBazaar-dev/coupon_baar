@@ -125,35 +125,34 @@
             </div>
         </div>
         <div class="coupons-wrapper">
+            {% for categories in categories %}
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/myntra.png" alt=""></a>
+                        {% for stores in stores%}
+                        <a href=""><img src="/media/{{categories.category_image}}" alt=""></a>
+                        {% endfor %}
                     </div>
                     <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
+                        <h1>{{coupons.discount}}</h1>
+                        <span>{{coupons.coupon_description}}</span>
                     </div>
                     <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-1" id="openCoupon">Show Code</button></a>
+                        <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
+                                type="button" data-modal="modal-{{coupons.coupon_id}}" id="openCoupon">Show Code</button></a>
                     </div>
                 </div>
                 <div class="coupon-modal-container" id="modal-1">
                     <div class="coupon-modal">
                         <span class="close" data-modal="modal-1" id="close">&times;</span>
                         <img src="./assests/image/logo/myntra.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
+                        <span>{{coupons.coupon_description}}</span>
                         <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
+                            <span id="couponCode2">{{coupons.coupon_code}}</span>
                         </div>
                         <div class="btn">
                             <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
+                            <a href="{{coupons.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
                                     Now</button></a>
                         </div>
 
@@ -161,110 +160,7 @@
                     <!-- </div> -->
                 </div>
             </div>
-            <div class="coupons-container" data-item="adidas">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/adidas.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit commodi placeat
-                            laborum totam voluptatibus!
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-2" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-2">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-2" id="close">&times;</span>
-                        <img src="./assests/image/logo/adidas.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
-                                    Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="coupons-container" data-item="ajio">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/Ajio.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-3" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-3">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-3" id="close">&times;</span>
-                        <img src="./assests/image/logo/Ajio.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consect\
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
-            <div class="coupons-container" data-item="giva">
-                <div class="coupons">
-                    <div class="coupons-logo">
-                        <a href=""><img src="./assests/image/logo/giva.png" alt=""></a>
-                    </div>
-                    <div class="coupon-description">
-                        <h1>Upto 30% Off</h1>
-                        <span>Lorem ipsum dolor s\
-                            Voluptatem, alias.</span>
-                    </div>
-                    <div class="show-code">
-                        <a href="https://www.instagram.com/" class="delayLink"><button class="modal-button"
-                                type="button" data-modal="modal-4" id="openCoupon">Show Code</button></a>
-                    </div>
-                </div>
-                <div class="coupon-modal-container" id="modal-4">
-                    <div class="coupon-modal">
-                        <span class="close" data-modal="modal-4" id="close">&times;</span>
-                        <img src="./assests/image/logo/giva.png" alt="">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga obcaecati neque
-                            nihil consequatur provident.
-                            Voluptatem, alias.</span>
-                        <div class="code">
-                            <span id="couponCode2">CouponBeardo</span>
-                        </div>
-                        <div class="btn">
-                            <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="https://www.instagram.com/" target="_blank"><button type="button" id=shopNow>Shop
-                                    Now</button></a>
-                        </div>
-
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 
@@ -296,7 +192,7 @@
         <div class="footer-container">
 
             <div class="footer-container-item ">
-                <div class="item-footer reveal">
+                <div class="item-footer">
                     <h3>Welcome</h3>
                     <p>
                         Thank you for choosing CouponBaar We're thrilled to have you here, and we hope you
@@ -307,25 +203,25 @@
                         The CouponBaar Team.
                     </p>
                 </div>
-                <div class="item-footer reveal">
+                <div class="item-footer">
                     <h3>Important Link</h3>
 
                     <div class="footer-nav">
                         <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i>
-                            <a href="index.html">Home</a>
+                            <a href="/index">Home</a>
                         </div>
                         <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
-                                href="store.html">Stores</a>
+                                href="/store">Stores</a>
                         </div>
                         <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
-                                href="Category.html">Category</a>
+                                href="/category">Category</a>
                         </div>
                         <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i><a
-                                href="contact.html">Contact</a>
+                                href="/contact">Contact</a>
                         </div>
                     </div>
                 </div>
-                <div class="item-footer reveal">
+                <div class="item-footer">
                     <h3>Category</h3>
 
                     <div class="footer-nav">
@@ -349,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-footer reveal">
+                <div class="item-footer">
                     <h3>Top Stores</h3>
                     <div class="footer-nav">
                         <div class="link"><i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302;"></i>
@@ -375,9 +271,9 @@
             <div class="footer-container-social">
                 <h3>Social Media</h3>
                 <div class="social-link">
-                    <a href="#"><i class="fa-brands fa-facebook  fa-bounce fa-2xl"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram fa-bounce fa-2xl "></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin fa-bounce fa-2xl "></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094181087771&mibextid=2JQ9oc"><i class="fa-brands fa-facebook  fa-bounce fa-2xl"></i></a>
+                    <a href=" https://instagram.com/couponbaar?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram fa-bounce fa-2xl "></i></a>
+                    <a href="https://twitter.com/CouponBaar?t=uqgRbPdEZs-L0bDIvRzbIg&s=09"><i class="fa-brands fa-twitter fa-bounce fa-2xl "></i></a>
                 </div>
                 <div class="subscribe">
                     <input type="email" name="" id="" placeholder="Subscribe Now">
@@ -386,9 +282,9 @@
             </div>
             <div class="footer-container-credentials">
                 <div class="left-credit">
-                    <a href="#">License</a>
-                    <a href="#">Privacy and Policy</a>
-                    <a href="#">Term of Services</a>
+                    <a href="/licence">License</a>
+                    <a href="/privacyandpolicy">Privacy and Policy</a>
+                    <a href="/termsofservice">Term of Services</a>
 
                 </div>
                 <div class="right-credit">
@@ -396,7 +292,7 @@
                 </div>
             </div>
             <div class="footer-logo">
-                <div class="logo"><a href="index.html"><img src="./assests/image/logo/couponbaarlogo.png" alt=""></a>
+                <div class="logo"><a href="/index"><img src="{% static './assests/image/logo/couponbaarlogo.png' %}" alt=""></a>
                 </div>
             </div>
         </div>
@@ -428,7 +324,7 @@ for(let i=0;i<filters.length;i++){
 }
 
 </script>
-    <script src="./assests/script/app.js"></script>
+    <script src="{% static './assests/script/app.js' %}"></script>
     <script src="https://github.com/zenorocha/clipboard.js.git"></script>
 </body>
 
