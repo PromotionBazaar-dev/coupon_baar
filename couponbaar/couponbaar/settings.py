@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-y6sn_zkql9m^t*n)suk1zvba=%my&j1c#!e5%@v)dz0_@f(^k%
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://*.couponbaar.com','http://*.couponbaar.com', 'https://*.127.0.0.1']
 
 
 # Application definition
