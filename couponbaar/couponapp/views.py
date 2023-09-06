@@ -3,6 +3,7 @@ from django.contrib import messages
 from couponapp.models import *
 from math import ceil
 from django.db import models
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -53,7 +54,7 @@ def storedetailsview(request, slug):
         messages.warning(request, 'No store found')
         return render(request, 'couponapp/storedetails.html')
     
-
+@csrf_exempt
 def Contact_us(request):
     stores = Store.objects.all()
     coupons = Coupon.objects.all()
