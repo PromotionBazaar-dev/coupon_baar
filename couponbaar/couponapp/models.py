@@ -38,6 +38,7 @@ class Coupon(models.Model):
     coupon_code = models.CharField(max_length=100, null = True)
     Store_name = models.ForeignKey(Store, on_delete=models.CASCADE)
     Category =  models.ForeignKey(Category, on_delete=models.CASCADE)
+    store_logo = models.ImageField(upload_to = 'coupon/images', default = "")
     tracking_urls = models.URLField(max_length=200)
     valid_date = models.DateField(null=True, blank = True)
     coupon_description = models.TextField(default = "")
