@@ -1414,18 +1414,6 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
         text-decoration: none;
     }
 }
-.best-deal-wrapper2 .deal-coupon2{
-    width: 300px;
-    scroll-snap-align: center;
-    height: auto;
-    border: 1px solid #eee;
-    overflow: hidden;
-    border-radius: 10px ;
-    z-index: 1;
-    & a{
-        text-decoration: none;
-    }
-}
 
 
 .best-deal-wrapper1 .deal-coupon1 .image{
@@ -1439,18 +1427,7 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
         border-radius: 10px 10px 0 0;
         z-index: 1;
     }
-    .best-deal-wrapper2 .deal-coupon2 .image{
-        width: 300px;
-        height: auto;
-        border-radius: 10px 10px 0 0;
-        }
-        .best-deal-wrapper2 .deal-coupon2 .image img{
-            max-width: 100%;
-            object-fit: contain;
-            border-radius: 10px 10px 0 0;
-            z-index: 1;
-        }
-    
+
   .best-deal-wrapper1::-webkit-scrollbar{
     display: none;
   }
@@ -1480,7 +1457,33 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     background-size: 600% 600%;
     transition: all 0.2s ease-in-out;
 }
-.best-deal-wrapper2::-webkit-scrollbar{
+.best-deal-wrapper2 .deal-coupon2{
+    width: 300px;
+    scroll-snap-align: center;
+    height: auto;
+    border: 1px solid #eee;
+    overflow: hidden;
+    border-radius: 10px ;
+    z-index: 1;
+    & a{
+        text-decoration: none;
+    }
+}
+
+
+.best-deal-wrapper2 .deal-coupon2 .image{
+    width: 300px;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    }
+    .best-deal-wrapper2 .deal-coupon2 .image img{
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 10px 10px 0 0;
+        z-index: 1;
+    }
+
+  .best-deal-wrapper2::-webkit-scrollbar{
     display: none;
   }
   .best-deal-wrapper2 .deal-coupon2 .image:hover img{
