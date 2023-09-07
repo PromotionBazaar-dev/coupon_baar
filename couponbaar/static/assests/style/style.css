@@ -1318,7 +1318,13 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     position: relative;
     background-color: #fff;
   }
-  .deal-container{
+  .deal-container1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .deal-container2{
     width: 100%;
     display: flex;
     align-items: center;
@@ -1342,7 +1348,23 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     font-size: 20px;
     
   }
-  .best-deal-wrapper{
+  .best-deal-wrapper1{
+    max-width: 945px;
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+    place-items: center ;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns:calc((100%/3)-12PX) ;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    
+  }
+  .best-deal-wrapper2{
     max-width: 945px;
     width: 90%;
     height: auto;
@@ -1380,7 +1402,19 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
   .best-deal i{
     z-index: 11;
   }
-  .best-deal-wrapper .deal-coupon{
+  .best-deal-wrapper1 .deal-coupon1{
+    width: 300px;
+    scroll-snap-align: center;
+    height: auto;
+    border: 1px solid #eee;
+    overflow: hidden;
+    border-radius: 10px ;
+    z-index: 1;
+    & a{
+        text-decoration: none;
+    }
+}
+.best-deal-wrapper2 .deal-coupon2{
     width: 300px;
     scroll-snap-align: center;
     height: auto;
@@ -1394,34 +1428,45 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
 }
 
 
-.best-deal-wrapper .deal-coupon .image{
+.best-deal-wrapper1 .deal-coupon1 .image{
     width: 300px;
     height: auto;
     border-radius: 10px 10px 0 0;
     }
-    .best-deal-wrapper .deal-coupon .image img{
+    .best-deal-wrapper1 .deal-coupon1 .image img{
         max-width: 100%;
         object-fit: contain;
         border-radius: 10px 10px 0 0;
         z-index: 1;
     }
-
-  .best-deal-wrapper::-webkit-scrollbar{
+    .best-deal-wrapper2 .deal-coupon2 .image{
+        width: 300px;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        }
+        .best-deal-wrapper2 .deal-coupon2 .image img{
+            max-width: 100%;
+            object-fit: contain;
+            border-radius: 10px 10px 0 0;
+            z-index: 1;
+        }
+    
+  .best-deal-wrapper1::-webkit-scrollbar{
     display: none;
   }
-  .best-deal-wrapper .deal-coupon .image:hover img{
+  .best-deal-wrapper1 .deal-coupon1 .image:hover img{
     transform: scale(1.04);
     transition: all 0.3s ease-in-out;
     overflow: hidden;
 }
-.best-deal-wrapper .deal-coupon .button-container{
+.best-deal-wrapper1 .deal-coupon1 .button-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     /* padding: 12px; */
 }
-.best-deal-wrapper .deal-coupon .button-container button{
+.best-deal-wrapper1 .deal-coupon1 .button-container button{
     padding: 6px 12px;
     background: #7063d9;
     border: none;
@@ -1429,7 +1474,36 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
     border-radius: 0 0 5px 5px;
     width: 100%;
 }
-.best-deal-wrapper .deal-coupon .button-container button:hover{
+.best-deal-wrapper1 .deal-coupon1 .button-container button:hover{
+    background:linear-gradient(to top right, #ff0000 0%, #990000 100%);
+    animation: gradient 2s ease infinite;
+    background-size: 600% 600%;
+    transition: all 0.2s ease-in-out;
+}
+.best-deal-wrapper2::-webkit-scrollbar{
+    display: none;
+  }
+  .best-deal-wrapper2 .deal-coupon2 .image:hover img{
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+.best-deal-wrapper2 .deal-coupon2 .button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 12px; */
+}
+.best-deal-wrapper2 .deal-coupon2 .button-container button{
+    padding: 6px 12px;
+    background: #7063d9;
+    border: none;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+}
+.best-deal-wrapper2 .deal-coupon2 .button-container button:hover{
     background:linear-gradient(to top right, #ff0000 0%, #990000 100%);
     animation: gradient 2s ease infinite;
     background-size: 600% 600%;
