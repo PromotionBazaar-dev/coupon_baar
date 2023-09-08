@@ -134,7 +134,7 @@
                 <div class="coupons">
                     <div class="coupons-logo">
                         {% for store in stores%}
-                        <a href=""><img src="/media/{{store.logo.store_id}}" alt=""></a>
+                        <a href=""><img src="/media/{{store.logo}}" alt=""></a>
                         {% endfor %}
                     </div>
                     <div class="coupon-description">
@@ -142,21 +142,21 @@
                         <span>{{coupon.coupon_description}}</span>
                     </div>
                     <div class="show-code">
-                        <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
-                            type="button" data-modal="modal-{{coupons.coupon_id}}" id="openCoupon">Show Code</button></a>
+                        <a href="{{coupon.tracking_urls}}" class="delayLink"><button class="modal-button"
+                            type="button" data-modal="modal-{{coupon.coupon_id}}" id="openCoupon">Show Code</button></a>
                     </div>
                 </div>
-                <div class="coupon-modal-container" id="modal-{{coupons.coupon_id}}">
+                <div class="coupon-modal-container" id="modal-{{coupon.coupon_id}}">
                     <div class="coupon-modal">
-                        <span class="close" data-modal="modal-{{coupons.coupon_id}}" id="close">&times;</span>
-                        <img src="/media/{{stores.logo}}" alt="">
+                        <span class="close" data-modal="modal-{{coupon.coupon_id}}" id="close">&times;</span>
+                        <img src="/media/{{store.logo}}" alt="">
                         <span>{{coupon.coupon_description}}</span>
                         <div class="code">
                             <span id="couponCode2">{{coupon.coupon_code}}</span>
                         </div>
                         <div class="btn">
                             <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="{{coupons.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
+                            <a href="{{coupon.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
                                     Now</button></a>
                         </div>
 
