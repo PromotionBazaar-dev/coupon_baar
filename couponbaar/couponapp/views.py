@@ -17,8 +17,9 @@ def Index(request):
 
 def category(request):
     categories = Category.objects.all()
+    stores = Store.objects.all()
     coupons = Coupon.objects.all()
-    context = {'categories': categories, 'coupons': coupons,}
+    context = {'categories': categories, 'coupons': coupons, 'stores': stores}
     return render(request, 'couponapp/category.html', context)
 
 def store(request):
