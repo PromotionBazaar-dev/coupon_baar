@@ -908,12 +908,12 @@
         <div class="item-footer reveal">
           <h3>Top Stores</h3>
           <div class="footer-nav">
-            {% for stores in stores|slice:":6" %}
             <div class="link">
+              {% for stores in stores|slice:":6" %}
               <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
               <a href="{% url 'storedetails' stores.slug %}">{{stores.store_name}}</a>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
