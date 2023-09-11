@@ -151,57 +151,29 @@
               </div>
             </div>
           </div>
-          <div class="item-footer ">
-            <h3>Category</h3>
-  
-            <div class="footer-nav">
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-                <a href="\">Fashion</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Technology</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Food</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Healthcare</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Home
-                  Care</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Education</a>
-              </div>
+           <div class="item-footer">
+           <h3>Category</h3>
+          <div class="footer-nav">
+            {% for categories in categories|slice:":6" %}
+            <div class="link">
+              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
+              <a href="{% url 'categorydetails' categories.slug %}">{{categories.category_name}}</a>
             </div>
-          </div>
-          <div class="item-footer ">
-            <h3>Top Stores</h3>
-            <div class="footer-nav">
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-                <a href="fc-moto.html">FC Moto</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="cottonOn.html">Cotton
-                  ON</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                  href="Eddie_Bauer_US.html">Eddie Bauer</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                  href="kohls_us.html">Kohl's</a>
-              </div>
-              <div class="link">
-                <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="store.html">More</a>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
+        <div class="item-footer">
+          <h3>Top Stores</h3>
+          <div class="footer-nav">
+            {% for stores in stores|slice:"4:9" %}
+            <div class="link">
+              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
+              <a href="{% url 'storedetails' stores.slug %}">{{stores.Store_name}}</a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
         <div class="footer-container-social">
           <h3>Social Media</h3>
           <div class="social-link">
