@@ -895,30 +895,16 @@
           </div>
         </div>
         <div class="item-footer reveal">
-          <h3>Category</h3>
+           <h3>Category</h3>
+          {% for categories in categories|slice:":6" %}
 
           <div class="footer-nav">
             <div class="link">
               <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-              <a href="\">Fashion</a>
-            </div>
-            <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Technology</a>
-            </div>
-            <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Food</a>
-            </div>
-            <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Healthcare</a>
-            </div>
-            <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Home
-                Care</a>
-            </div>
-            <div class="link">
-              <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Education</a>
+              <a href="{% url 'categorydetails' categories.slug %}">{{categories.category_name}}</a>
             </div>
           </div>
+           {% endfor %}
         </div>
         <div class="item-footer reveal">
           <h3>Top Stores</h3>
