@@ -30,6 +30,9 @@ def store(request):
 
 def categorydetailsview(request, slug):
     categories = Category.objects.filter(slug=slug)
+    print(categories, 'categories')
+    for cat in categories:
+        print(cat.category_image, 'category image')
     if categories:
         stores = Store.objects.filter(category__slug=slug)
         coupons = Coupon.objects.filter(Category__in=list(categories.values_list('category_id', flat=True)))

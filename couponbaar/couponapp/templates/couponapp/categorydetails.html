@@ -88,17 +88,17 @@
 
     <section class="main-store">
         <div class="store-head" id="categoryHeading">
-            {% for categories in categories %}
+            {% for category in categories %}
             <div class="store-logo" id="ctageoryImage">
-                <img src="/media/{{categories.category_image}}" alt="">
+                <img src="/media/{{category.category_image}}" alt="">
             </div>
             {% endfor %}
             <div class="border">
             </div>
             <div class="store-content">
-                {% for categories in categories%}
+                {% for category in categories%}
                 <div class="store-description">
-                    Trending {{categories.category_name}} Coupons in 2023
+                    Trending {{category.category_name}} Coupons in 2023
                 </div>
                 {% endfor %}
                 <div class="store-coupon-count">
@@ -129,34 +129,32 @@
             </div>
         </div>
         <div class="coupons-wrapper">
-            {% for coupons in coupons %}
+            {% for coupon in coupons %}
             <div class="coupons-container" data-item="myntra">
                 <div class="coupons">
                     <div class="coupons-logo">
-                        {% for stores in stores%}
-                        <a href=""><img src="/media/{{stores.logo.store_id}}" alt=""></a>
-                        {% endfor %}
+                        <a href=""><img src="/media/{{coupon.Store_name.logo}}" alt=""></a>
                     </div>
                     <div class="coupon-description">
-                        <h1>{{coupons.discount}}</h1>
-                        <span>{{coupons.coupon_description}}</span>
+                        <h1>{{coupon.discount}}</h1>
+                        <span>{{coupon.coupon_description}}</span>
                     </div>
                     <div class="show-code">
-                        <a href="{{coupons.tracking_urls}}" class="delayLink"><button class="modal-button"
-                            type="button" data-modal="modal-{{coupons.coupon_id}}" id="openCoupon">Show Code</button></a>
+                        <a href="{{coupon.tracking_urls}}" class="delayLink"><button class="modal-button"
+                            type="button" data-modal="modal-{{coupon.coupon_id}}" id="openCoupon">Show Code</button></a>
                     </div>
                 </div>
-                <div class="coupon-modal-container" id="modal-{{coupons.coupon_id}}">
+                <div class="coupon-modal-container" id="modal-{{coupon.coupon_id}}">
                     <div class="coupon-modal">
-                        <span class="close" data-modal="modal-{{coupons.coupon_id}}" id="close">&times;</span>
-                        <img src="/media/{{stores.logo}}" alt="">
-                        <span>{{coupons.coupon_description}}</span>
+                        <span class="close" data-modal="modal-{{coupon.coupon_id}}" id="close">&times;</span>
+                        <img src="media/{{coupon.Store_name.logo}}" alt="">
+                        <span>{{coupon.coupon_description}}</span>
                         <div class="code">
-                            <span id="couponCode2">{{coupons.coupon_code}}</span>
+                            <span id="couponCode2">{{coupon.coupon_code}}</span>
                         </div>
                         <div class="btn">
                             <button type="button" id="copy" data-clipboard-target="#couponCode2">Copy Code</button>
-                            <a href="{{coupons.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
+                            <a href="{{coupon.tracking_urls}}" target="_blank"><button type="button" id=shopNow>Shop
                                     Now</button></a>
                         </div>
 
