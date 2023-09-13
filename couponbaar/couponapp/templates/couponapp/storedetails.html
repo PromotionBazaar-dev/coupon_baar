@@ -29,8 +29,10 @@
         <nav>
             <div class="menu-contact">
                 <a href="/index" class="nav-item">Home</a>
-                <div class="dropdown">
-                    <a href="/category" class="nav-item">Category</a>
+                <a href="/category" class="nav-item">Category</a>
+                <a href="/store" class="nav-item">Store</a>
+                <a href="/contact" class="nav-item">Contact</a> 
+                <!-- <div class="dropdown">
                     <div class="dropdown-container">
                         <div class="column">
                             {% for categories in categories|slice:":12"  %}
@@ -41,7 +43,6 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="/store" class="nav-item">Store</a>
                     <div class="dropdown-container">
                         <div class="column">
                             {% for stores in stores|slice:":12" %}
@@ -50,8 +51,7 @@
                             {% endfor %}
                         </div>
                     </div>
-                </div>
-                <a href="contact" class="nav-item">Contact</a>   
+                </div>   -->
             </div>
             <div class="mobileMenu">
                 <div class="close-menu" onclick="closeMenu()"><span>&times;</span></div>
@@ -154,78 +154,50 @@
               <div class="footer-nav">
                 <div class="link">
                   <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-                  <a href="index">Home</a>
+                  <a href="/index">Home</a>
                 </div>
                 <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="store">Stores</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                    href="category">Category</a>
+                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="/store">Stores</a>
                 </div>
                 <div class="link">
                   <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                    href="contact">Contact</a>
+                    href="/category">Category</a>
+                </div>
+                <div class="link">
+                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
+                    href="/contact">Contact</a>
                 </div>
               </div>
             </div>
-            <div class="item-footer ">
+            <div class="item-footer">
               <h3>Category</h3>
-    
-              <div class="footer-nav">
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-                  <a href="\">Fashion</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Technology</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Food</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Healthcare</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Home
-                    Care</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="\">Education</a>
-                </div>
-              </div>
-            </div>
-            <div class="item-footer ">
-              <h3>Top Stores</h3>
-              <div class="footer-nav">
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
-                  <a href="fc-moto.html">FC Moto</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="cottonOn.html">Cotton
-                    ON</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                    href="Eddie_Bauer_US.html">Eddie Bauer</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a
-                    href="kohls_us.html">Kohl's</a>
-                </div>
-                <div class="link">
-                  <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i><a href="store.html">More</a>
-                </div>
-              </div>
-            </div>
-          </div>
+             <div class="footer-nav">
+               {% for categories in categories %}
+               <div class="link">
+                 <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
+                 <a href="{% url 'categorydetails' categories.slug %}">{{categories.category_name}}</a>
+               </div>
+               {% endfor %}
+             </div>
+           </div>
+           <div class="item-footer">
+             <h3>Top Stores</h3>
+             <div class="footer-nav">
+               {% for stores in stores %}
+               <div class="link">
+                 <i class="fa-solid fa-caret-right fa-beat-fade" style="color: #d2b302"></i>
+                 <a href="{% url 'storedetails' stores.slug %}">{{stores.Store_name}}</a>
+               </div>
+               {% endfor %}
+             </div>
+           </div>
+         </div>
           <div class="footer-container-social">
             <h3>Social Media</h3>
             <div class="social-link">
-              <a href="#"><i class="fa-brands fa-facebook fa-bounce fa-2xl"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram fa-bounce fa-2xl"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin fa-bounce fa-2xl"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100094181087771&mibextid=ZbWKwL"><i class="fa-brands fa-facebook fa-bounce fa-2xl"></i></a>
+              <a href="https://www.instagram.com/couponbaar/?igshid=NzZhOTFlYzFmZQ%3D%3D"><i class="fa-brands fa-instagram fa-bounce fa-2xl"></i></a>
+              <a href="https://t.me/couponbaar"><i class="fa-brands fa-telegram fa-bounce fa-2xl"></i></a>
             </div>
             <div class="subscribe">
               <input type="email" name="" id="" placeholder="Subscribe Now" />
