@@ -285,7 +285,7 @@ function initializeCarousel(wrapperSelector, carouselSelector, cardSelector, arr
 
     const autoPlay = () => {
         if (window.innerWidth < 400 || !isAutoPlay) return;
-        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth,4000);
+        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth,5000);
     }
     autoPlay();
 
