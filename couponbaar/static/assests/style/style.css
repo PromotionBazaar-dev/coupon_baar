@@ -9,7 +9,7 @@
 
 body,html{
     color: #000;
-    background: #fff;
+    background: #f3f3f3;
     width: 100%;
     overflow-x: hidden;
     
@@ -157,7 +157,7 @@ body,html{
     flex-direction: column;
     position: absolute;
     align-items: center;
-    top: -41px;
+    top: -67px;
     left: 0%;
     justify-content: center;
     width: 100%;
@@ -825,7 +825,7 @@ body,html{
     margin: 0%;
     height: fit-content;
     width: 100%;
-    background: #fff;
+    /* background: #f3f3f3; */
     position: relative;
     display: flex;
     align-items: center;
@@ -1958,12 +1958,12 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
 @keyframes couoponModalAnimation {
     0%{
         opacity: 0;
-        transform: translateY(500px) rotateY(-630deg) scale(0);
+        transform: translateY(-500px) scale(0);
         
     }
     100%{
         opacity: 1;
-        transform: translateY(0px)  rotateY(0deg) scale(1);
+        transform: translateY(0px) scale(1);
         }
 }
 
