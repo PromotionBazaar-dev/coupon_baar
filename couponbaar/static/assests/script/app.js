@@ -10,7 +10,7 @@ function openLinkInNewTabWithDelay(linkElement, delayInMilliseconds) {
     setTimeout(function() {
       const linkUrl = linkElement.getAttribute('href');
       window.open(linkUrl, '_blank');
-    }, 7000);
+    }, 8000);
   }
 
   // Add event listeners to all links with the 'delayLink' class
@@ -18,7 +18,7 @@ function openLinkInNewTabWithDelay(linkElement, delayInMilliseconds) {
   delayLinks.forEach(function(link) {
     link.addEventListener('click', function(event) {
       event.preventDefault();
-      const delayTime = 7000; 
+      const delayTime = 8000; 
       openLinkInNewTabWithDelay(link, delayTime);
     });
   });
@@ -285,7 +285,7 @@ function initializeCarousel(wrapperSelector, carouselSelector, cardSelector, arr
 
     const autoPlay = () => {
         if (window.innerWidth < 400 || !isAutoPlay) return;
-        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth,4000);
     }
     autoPlay();
 
