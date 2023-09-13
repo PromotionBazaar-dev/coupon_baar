@@ -786,7 +786,9 @@ body,html{
     justify-content: center;
     padding: 20px 0;
 }
-
+.banners{
+    width: 70%;
+}
 .category-main {
     width: 70%;
     display: flex;
